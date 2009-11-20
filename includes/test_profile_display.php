@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!--
 #
 #	Test for display user profile (without session)
@@ -9,10 +10,7 @@
 
 <?php
 include("functions_user.php");
-$user_id = "1";
-$username = get_username($user_id);
-$user = get_profile($user_id);
-
+$user = $_SESSION['user'];
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -28,6 +26,6 @@ $user = get_profile($user_id);
 </h1>
 
 
-Hello <?= $user['username']; ?> @ <?echo $user['email']; ?>
+Hello <?= $user['username']; ?> @ <?= $user['email']; ?>
 </body>
 </html>

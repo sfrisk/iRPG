@@ -28,13 +28,13 @@ if(isset($_POST['submit']))
 	$errors = array();
 	
 	//form has been submitted
-	if($username == ""){
+	if(empty($username)){
 		$errors[] = "Need username";
 	}
-	if($password == ""){
+	if(empty($password)){
 		$errors[] = "Need password";
 	}
-	if($email == ""){
+	if(empty($email)){
 		$errors[] = "Need email";
 	}
 	
