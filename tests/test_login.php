@@ -32,37 +32,8 @@ $user = get_user_from_name($username);
 
 if(isset($_POST['submit']))
 {
-	$errors = array();
-
-	//form has been submitted
-	if(empty($username)){
-		$errors[] = "Need username";
-	}
-	if(empty($password)){
-		$errors[] = "Need password";
-	}
-		
-	if(empty($user['id']))
+	if(check_user_error($username, $password, "empty", false))
 	{
-		$errors[] = "User Does Not Exist";
-	}
-	
-	if($password != $user['password'])
-	{
-		$errors[] = "Wrong user/password combination";
-	}
-
-	if(count($errors) > 0) 
-	{
-			echo '<ul id="error">';
-			foreach($errors as $e) 
-			{
-				echo "<li>$e</li>";
-			}
-			echo "</ul>";
-			
-	}
-	else{
 		echo "login correct \n";
 		echo "session start \n";
 		$session_id = session_id();

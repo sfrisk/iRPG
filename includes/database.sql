@@ -5,5 +5,4 @@ CREATE TABLE rpg_users (
 	user_password varbinary(120) NOT NULL,
 	user_email blob NOT NULL,
 	PRIMARY KEY (user_id),
-	UNIQUE username_clean (username_clean(225))
 	);

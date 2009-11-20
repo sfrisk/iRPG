@@ -4,8 +4,6 @@ foreach(glob('../includes/*.php') as $class_filename) {
      require_once($class_filename);
 }
 ?>
-
-
 <!--
 #
 #	Test for creating users
@@ -31,31 +29,10 @@ $email = $HTTP_POST_VARS['email'];
 
 if(isset($_POST['submit']))
 {
-	$errors = array();
 	
-	//form has been submitted
-	if(empty($username)){
-		$errors[] = "Need username";
-	}
-	if(empty($password)){
-		$errors[] = "Need password";
-	}
-	if(empty($email)){
-		$errors[] = "Need email";
-	}
-	
-	if(count($errors) > 0) 
-	{
-			echo '<ul id="error">';
-			foreach($errors as $e) 
-			{
-				echo "<li>$e</li>";
-			}
-			echo "</ul>";
-	}
-	else{
+	if(check_user_error($username, $password, $email, true))
 		user_add($username, $password, $email);
-	}
+	
 }
 
 

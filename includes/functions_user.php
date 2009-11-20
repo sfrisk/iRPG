@@ -143,5 +143,51 @@ function unique_username($username)
 		return false;
 }
 
+/**
+* Error checking
+* Makes sure all values or listed
+*/
+function check_error($username, $password, $email, $new_character)
+{
+	$errors = array();
+	$user = get_user_from_name($username);
+	
+	//form has been submitted
+	if(empty($username)){
+		$errors[] = "Need username";
+	}
+	if(empty($password)){
+		$errors[] = "Need password";
+	}
+	if(empty($email)){
+		$errors[] = "Need email";
+	}
+	
+	if($new_character == false){
+		if(empty($user['id']))
+		{
+			$errors[] = "User Does Not Exist";
+		}
+
+		if($password != $user['password'])
+		{
+			$errors[] = "Wrong user/password combination";
+		}	
+	}
+	
+	if(count($errors) > 0) 
+	{
+			echo '<ul id="error">';
+			foreach($errors as $e) 
+			{
+				echo "<li>$e</li>";
+			}
+			echo "</ul>";
+			return false;
+	}
+	else
+		return true;
+}
+
 
 ?>

@@ -1,0 +1,12 @@
+This project (currently called iRPG) is a character sheet database for D&D 3.5.  A user may sign in/create an account, and from their account create multiple character sheets for their different characters.
+
+Future implementations include user to user interaction where users can link character sheets together as being part of a 'party.'
+
+Site Architecture: 
+
+/includes
+	This is where I've placed on my php functions
+/tests
+	This is where I placed my initial tests of the functions
+/mockups
+	early design sketches
