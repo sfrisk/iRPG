@@ -1,1 +1,0 @@
-user|a:4:{s:8:"username";s:11:"Darth Vader";s:8:"password";s:8:"darkside";s:5:"email";s:18:"vader@jedisuck.com";s:2:"id";s:2:"20";}userid|s:1:"1";
