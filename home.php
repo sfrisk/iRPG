@@ -25,6 +25,7 @@ if(empty($user))
 			<?= $username; ?>
 		</h1>
 
+			<img src ="<?= Gravatar::creat($user['email']) ?>" />
 
 		Hello <?= $user['username']; ?>, your email is: <?= $user['email']; ?>
 		<a href="logout.php">Logout<a>

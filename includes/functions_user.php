@@ -24,7 +24,10 @@ function user_add($username, $password, $email)
 		}
 			
 		$user_email = strtolower($email);
-		$sql = "INSERT INTO rpg_users (username, user_password, user_email) values ('" . $username . "', '" . $password . "', '" . $user_email . "')";
+		$password_salt = md5(uniqid(rand(), true));
+		$salted_password = md5($password . $password_salt . 'magicalworld');
+		
+		$sql = "INSERT INTO rpg_users (username, user_password, salt, user_email) values ('" . $username . "', '" . $salted_password . "', '" . $password_salt . "', '" . $user_email . "')";
 		if($db->query($sql))
 		{
 			echo "Database Updated!!";
@@ -100,6 +103,7 @@ function get_user_from_name($username)
 			'username' 	=> $row["username"],
 			'password'	=> $row["user_password"],
 			'email'		=> $row["user_email"],
+			'salt'		=> $row["salt"],
 			'id'		=> $row["user_id"]
 			);
 	}
@@ -145,7 +149,7 @@ function check_user_error($username, $password, $email, $new_character)
 //			$errors[] = "User Does Not Exist";
 //		}
 
-		if($password != $user['password'])
+		if(md5($password . $user['salt'] . 'magicalworld') != $user['password'])
 		{
 			$errors[] = "Wrong user/password combination";
 		}	
