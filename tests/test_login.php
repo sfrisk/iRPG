@@ -34,15 +34,8 @@ if(isset($_POST['submit']))
 {
 	if(check_user_error($username, $password, "empty", false))
 	{
-		echo "login correct \n";
-		echo "session start \n";
 		$session_id = session_id();
-		echo "Session ID" . $session_id;
 		$_SESSION['user'] = $user;
-		$fp = fopen("session_test.txt",  "w+");  
-		$data = session_encode();
-		fwrite($fp, $data);
-		fclose($fp);
 	}
 }
 

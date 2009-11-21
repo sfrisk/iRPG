@@ -139,11 +139,11 @@ function check_user_error($username, $password, $email, $new_character)
 		$errors[] = "Need email";
 	}
 	
-	if($new_character == false){
-		if(empty($user['id']))
-		{
-			$errors[] = "User Does Not Exist";
-		}
+	else if($new_character == false && !empty($password) && !empty($username)){
+//		if(empty($user['id']))
+//		{
+//			$errors[] = "User Does Not Exist";
+//		}
 
 		if($password != $user['password'])
 		{
