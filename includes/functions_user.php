@@ -4,11 +4,8 @@
 * iRPG
 *
 */
-
-$dbhost = 'Localhost';
-$dbname = 'rpg';
-$dbuser = 'root';
-$dbpass = '';
+require_once("database.php");
+$db = new database();
 
 /**
 *Add a user
@@ -18,12 +15,7 @@ $dbpass = '';
 
 function user_add($username, $password, $email)
 {	
-		global $dbhost, $dbuser, $dbpass, $dbname;
-	
- 		@mysql_connect($dbhost, $dbuser, $dbpassword)
-			or die("The site database is down" . mysql_error());
-		@mysql_select_db($dbname)
-			or die("The site database is unavailable" . mysql_error());
+		global $db;
 
 		if(!unique_username($username))
 		{
@@ -33,7 +25,7 @@ function user_add($username, $password, $email)
 			
 		$user_email = strtolower($email);
 		$sql = "INSERT INTO rpg_users (username, user_password, user_email) values ('" . $username . "', '" . $password . "', '" . $user_email . "')";
-		if(mysql_query($sql))
+		if($db->query($sql))
 		{
 			echo "Database Updated!!";
 		}
@@ -45,17 +37,12 @@ function user_add($username, $password, $email)
 **/
 function get_id($username)
 {
-	global $dbhost, $dbuser, $dbpass, $dbname;
-	
-	@mysql_connect($dbhost, $dbuser, $dbpassword)
-		or die("The site database is down" . mysql_error());
-	@mysql_select_db($dbname)
-		or die("The site database is unavailable" . mysql_error());
+	global $db;
 		
 	$sql = "SELECT user_id from rpg_users where username = '" . $username . "'";
-	$results = mysql_query($sql);
+	$results = $db->query($sql);
 	$user_id = "";
-	while($row = mysql_fetch_array($results)){
+	while($row = $db->fetch($results)){
 		$user_id = $row["user_id"];
 	}
 	
@@ -65,21 +52,18 @@ function get_id($username)
 
 function get_username($user_id)
 {
-	global $dbhost, $dbuser, $dbpass, $dbname;
-	
-	@mysql_connect($dbhost, $dbuser, $dbpassword)
-		or die("The site database is down" . mysql_error());
-	@mysql_select_db($dbname)
-		or die("The site database is unavailable" . mysql_error());
+
+	global $db;
 		
 	$sql = "SELECT username from rpg_users where user_id = '" . $user_id . "'";
-	$results = mysql_query($sql);
+	$results = $db->query($sql);
 	$username = "";
-	while($row = mysql_fetch_array($results)){
+	while($row = $db->fetch($results)){
 		$username = $row["username"];
 	}
 	
 	return $username;
+
 }
 
 /*
@@ -88,16 +72,12 @@ function get_username($user_id)
 
 function get_user_from_id($user_id)
 {
-	global $dbhost, $dbuser, $dbpass, $dbname;
+	global $db;
 	
-	@mysql_connect($dbhost, $dbuser, $dbpassword)
-		or die("The site database is down" . mysql_error());
-	@mysql_select_db($dbname)
-		or die("The site database is unavailable" . mysql_error());
 	$profile;
 	$sql = "SELECT * from rpg_users where user_id = '" . $user_id . "'";
-	$results = mysql_query($sql);
-	while($row = mysql_fetch_array($results)){
+	$results = $db->query($sql);
+	while($row = $db->fetch($results)){
 		$profile = array(
 			'username' 	=> $row["username"],
 			'password'	=> $row["user_password"],
@@ -110,16 +90,12 @@ function get_user_from_id($user_id)
 
 function get_user_from_name($username)
 {
-	global $dbhost, $dbuser, $dbpass, $dbname;
+	global $db;
 	
-	@mysql_connect($dbhost, $dbuser, $dbpassword)
-		or die("The site database is down" . mysql_error());
-	@mysql_select_db($dbname)
-		or die("The site database is unavailable" . mysql_error());
 	$profile;
 	$sql = "SELECT * from rpg_users where username = '" . $username . "'";
-	$results = mysql_query($sql);
-	while($row = mysql_fetch_array($results)){
+	$results = $db->query($sql);
+	while($row = $db->fetch($results)){
 		$profile = array(
 			'username' 	=> $row["username"],
 			'password'	=> $row["user_password"],
@@ -145,9 +121,9 @@ function unique_username($username)
 
 /**
 * Error checking
-* Makes sure all values or listed
+* 
 */
-function check_error($username, $password, $email, $new_character)
+function check_user_error($username, $password, $email, $new_character)
 {
 	$errors = array();
 	$user = get_user_from_name($username);
