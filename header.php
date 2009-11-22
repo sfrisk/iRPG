@@ -1,8 +1,6 @@
-<?
+<?php
 	// © 2009 rpgalot
 	// Programed by Sarah, who is totally awesome
-	
-	header( "Content-Type: text/html; charset=UTF-8" );
 
 ?>
 
@@ -15,3 +13,23 @@
 			<meta name="author" content="Sarah Frisk" />
 		</head>
 		<body>
+		<div id="header">
+		
+		<img src="images/logo.png" alt="rpgalot" \>
+		
+		<ul id="toplinks">
+		<li>Blog</li>
+		<li>Features</li>
+		<li>About</li>
+		<?php if(!empty($_SESSION['user'])){ ?>
+			<li><a href="home.php">Profile</a></li>
+			<li>Character</li>
+			<li>Account</li>
+			<li><a href="logout.php">Logout<a></li>
+		<? } else{ ?>
+		<li><a href="index.php">Login</a></li>
+		<li><a href="signup.php">Signup</a></li>
+		<?	}	?>
+		</ul>
+		</div>
+		</div>

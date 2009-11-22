@@ -10,8 +10,8 @@ if(!empty($_SESSION['user']))
 	header('Location: home.php');
 }
 
-$username = $HTTP_POST_VARS['username'];
-$password = $HTTP_POST_VARS['password'];
+$username = $_REQUEST['username'];
+$password = $_REQUEST['password'];
 $user = get_user_from_name($username);
 
 $output;
@@ -31,9 +31,9 @@ include('header.php');
 
 ?>
 
-	<div class = "content">
-	<div id="sign_in">
-	<form id="login" action="index.php" method="post">
+	<div class = "login">
+	<div id="sign">
+	<form action="index.php" method="post">
 			<p>
 				<label for="username">Username</label>
 				<br / >

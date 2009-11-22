@@ -1,0 +1,29 @@
+About Us
+
+The creator of rpgalot, a 22 year old CS/English major who is known 
+for being quite forgetful, found herself often invited for a D&D session
+only to discover that she left her character sheet back in her dorm room
+over an hour away.
+
+That's where rpgalot came in.  No longer do gamers have to worry about having
+all their character sheets on hand, or wondering which character goes to
+which game.  rpgalot is an online database to store all your charactersheets,
+which you can later print off when it's time to game, then update your new stats
+to the database. 
+
+
+
+
+
+How was RPGalot built?
+
+Sarah, currently the only person working on this web application, made it using a php 
+backbone on her Mac computer in whatever free time she had inbetween classes and homework 
+assignments.  Most of the art was sketched halfheartedly on a scrap piece of paper, scanned
+into her computer, and attempted to make it look professional using Photoshop and Illustrator.  
+She is pretty sure she's gonna go back and fix that, once she has some free time.
+
+Contact us
+
+or rather, contact Sarah, the only person working on this project.  If you have any questions, you
+can contact her at sarah@sarahfrisk.com or you can reach her on twitter : @sarahfrisk

@@ -4,7 +4,7 @@
 * iRPG
 *
 */
-require_once("database.php");
+require_once("functions_database.php");
 $db = new database();
 
 /**
@@ -144,11 +144,6 @@ function check_user_error($username, $password, $email, $new_character)
 	}
 	
 	else if($new_character == false && !empty($password) && !empty($username)){
-//		if(empty($user['id']))
-//		{
-//			$errors[] = "User Does Not Exist";
-//		}
-
 		if(md5($password . $user['salt'] . 'magicalworld') != $user['password'])
 		{
 			$errors[] = "Wrong user/password combination";

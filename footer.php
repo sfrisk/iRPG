@@ -1,11 +1,11 @@
 <div id = "footer">
 
 <ul>
-	<li>&copy rpgalot</li>
+	<li>&copy RPGalot</li>
 	<li>About Us</li>
-	<li>What is rpgalot?</li>
+	<li>Contact Us</li>
 </ul>
 
-
+</div>
 </body>
 </html>

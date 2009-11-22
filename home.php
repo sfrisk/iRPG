@@ -11,23 +11,32 @@ if(empty($user))
 	header('Location: index.php');
 }
 
+include('header.php');
+
 ?>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>User Profile</title>
-</head>
-	<body>
-
+		<div class="content">
 		<h1>
-			<?= $username; ?>
+			<img src ="<?= Gravatar::creat($user['email']) ?>" />
+			<?= $user['username'] ?>
 		</h1>
 
-			<img src ="<?= Gravatar::creat($user['email']) ?>" />
+		<p>	
+			<span class="bold">Name:</span> REAL NAME
+			<br />
+			<span class="bold">Location:</span> A LOCATION
+			<br />
+			<span class="bold">Age:</span> AN AGE
+			<br />
+			<span class="bold">Gender</span> GENDER
+			<br />
+			<span class="bold">E-mail:</span> <?=$user['email']; ?>
+			<br />
+			<span class="bold">Website:</span> WEBSITE
+			<br />
+			<span class="bold">AIM:</span> A USER NAME
+			
+		</p>
+	
 
-		Hello <?= $user['username']; ?>, your email is: <?= $user['email']; ?>
-		<a href="logout.php">Logout<a>
-	</body>
-</html>
+		</div>
+<? include('footer.php'); ?>

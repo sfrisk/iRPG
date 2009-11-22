@@ -1,17 +1,60 @@
 body{
-	background-image:url('images/background_login.png');
+		background-image:url('images/background_login.png');
+		/*background: #449fed;*/
+		padding-left:0px;
 }
 
+ul{
+	list-style-type:none;
+}
+
+li{
+	display:inline;
+	margin-left: 10px;
+}
 .content{
 	width: 800px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50px;
+	background: white;
+	border: 5px black solid;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	padding: 20px;
+}
+.login{
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-#login{
+.bold{
+	font-weight: bold; 
+}
+
+#sign{
 	width: 300px;
 	float:right;
 	margin-top: 100px;
 	border: 10px block solid;
+}
+
+#footer{
+	text-align: center;
+
+}
+
+#header{
+	margin-top: 0px;;
+	padding-right: 50px;
+}
+
+#toplinks{
+	float:right;
 }
