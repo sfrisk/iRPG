@@ -27,22 +27,13 @@ if(isset($_POST['submit']))
 	}	
 }
 
+include('header.php');
+
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>RPGalot</title>
-	</head>
-	<body>
-		<h1>
-			Welcome
-		</h1>	
-	
-	<form action="index.php" method="post">
-		<fieldset>
-			<legend>Login</legend>
+	<div class = "content">
+	<div id="sign_in">
+	<form id="login" action="index.php" method="post">
 			<p>
 				<label for="username">Username</label>
 				<br / >
@@ -56,7 +47,8 @@ if(isset($_POST['submit']))
 			<p>
 				<input type="submit" name="submit" value = "Login" > New User? <a href = "signup.php">Sign up!</a>
 			</p>
-		</fieldset>	
 	</form>
-	</body>
-	</html>
+	</div>
+		<img src="images/login.png" alt="login group" \>
+	</div>
+<? include('footer.php'); ?>
