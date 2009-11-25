@@ -15,14 +15,12 @@ include('header.php');
 	$username = $_REQUEST['username'];
 	$password =$_REQUEST['password'];
 	$email = $_REQUEST['email'];
-
+	$user = new user($username);
+	$error = NO_ERROR;
 
 	if(isset($_POST['submit']))
 	{
-
-		if(check_user_error($username, $password, $email, true))
-			user_add($username, $password, $email);
-
+		$user->add_User($username, $password, $email);
 	}
 
 

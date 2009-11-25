@@ -5,24 +5,26 @@ foreach(glob('includes/*.php') as $class_filename)
      require_once($class_filename);
 }
 
-if(!empty($_SESSION['user']))
+if(!empty($_SESSION[$user->password]))
 {
 	header('Location: home.php');
 }
 
 $username = $_REQUEST['username'];
 $password = $_REQUEST['password'];
-$user = get_user_from_name($username);
+
+$user = new user($username);
 
 $output;
 
 if(isset($_POST['submit']))
 {
 
-	if(check_user_error($username, $password, "empty", false))
+	//if(check_user_error($username, $password, "empty", false))
+	if($user->passwordMatch($password))
 	{
 		$session_id = session_id();
-		$_SESSION['user'] = $user;
+		$_SESSION['user'] = $user->username;
 		header('Location: home.php');
 	}	
 }

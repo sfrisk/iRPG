@@ -1,0 +1,84 @@
+1) I enjoy having the flexibility to make a character into whatever I like, including skills, feats, etc. The element of randomness
+can sometimes provide some fantastic stats (and some abysmal ones >.<)
+
+2) I like space to write details, for example weapon names, descriptions, etc, inventory items instead of having to rely on post-it
+notes stuck to the back (something I actually had to do). I also like having space to cross out and erase things when stats etc
+change.
+
+3) I have a bunch of pet peeves with D&D character sheets. Tiny spaces on the skills chart (granted there are loads, but at least a
+different sheet...?) and not enough room for writing feats. RANDOM STAT GENERATION... (22 Dexterity, 12 Constitution, my very first
+character, I kid you not. Her survivability was so low it was scary. Luckily, she was nimble enough to stay out of trouble.) A more
+clear way of calculating stat point gain/skill points (a clear formula would be really nice, instead of "it differs between
+races")... Oh, and a proper sheet to write spells on for magic using characters. (I ended up with a whole separate notebook for my
+second character, a wizard).
+
+4) Can't do much about random stats, it wouldn't be as fun otherwise. But a more clear way of calculating skill points would be
+nice. In general space out character sheets a bit, or simplify a little. (see above complaints, really)
+
+------------
+
+S
+I'm talking to you, because I might possibly need you to help beta for me
+you should be able to do it at work since it won't have flash
+right now I'm working on backbone
+but Phase One you'll be able to create a user account, and then you will be able to create multiple characters
+11:31pmSarah
+Sounds like it is gonna be a big project!
+I'd be glad to help you!
+11:31pmSarah
+yeah, well I am kinda thinking this is going to be my 'breakout' project
+but you'll be able to create characters, and it will figure out modifiers and everything
+and you'll be able to upgrade to different levels - although I think for starters it's just gonna be level one
+since I'm not sure how much I'll get done when it's due
+but phase one is a basic character sheet tracker
+so let's say the decision to play D&D comes up, and you can't find your paper copy of your character sheet, you can just print it off
+wherever you are
+Phase Two is going to involve user to user interaction
+so you can link various characters together to form an Adventure Group
+possibly to be used to help plan out characters for a campaign
+11:36pmSarah
+...anyway, that's as far as I've gotten
+http://www.sarahfrisk.com/stuff/signin.png
+that link is a basic sketch of what I'm thinking for the user signin window
+but if you have any ideas of what you would like in an online D&D app, or whatever, let me know
+since while I like gaming
+since colby isn't really a tabletop gaming place, I don't do it much
+i might need you to also check my math
+11:39pmSarah
+the sign in page mock-up is cute!
+You should have a basic character sheet but you should also create some for the basic classes
+Like have one for wizard/sorcerer that has a place for spells and one for rogue that has a place for you to put your sneak attak damage and so on
+11:40pmSarah
+I'm thinking when you select a class it will modify the character sheet to reflect class needs
+and when you level up, it will automatically level up class/race stuff
+11:41pmSarah
+good idre
+*idea
+I'll try to think of what I would like to see in an application like that
+11:41pmSarah
+well I tried finding stuff online
+but I could find any really social networking database
+11:42pmSarah
+Maybe something that will create random dice rolls for you?
+11:42pmSarah
+yeah, I think I might have the option of "roll dice for stats" or entering in your own
+since this project is due in three weeks, I'm thinking basics will work only
+Phase one stuff
+Items probably won't be set up yet
+although I'm hoping to set up an item database/shop
+that will automatically figure out what it costs, even with upgrades
+if you have enough money
+or if your character can't use a particular weapon
+11:45pmSarah
+I've seen something like this that I like...Maybe for your equipment there could be a chart of a person with lines going to different body parts where you can equip stuff- like a line going to your back for a cloak, a line to you head for a helmet/ headband... your throat for an amulet... that kinda shit. So you can make sure you aren't equiping multiple items to the same slot.
+11:45pmSarah
+ooo
+nice
+11:45pmSarah
+Good idea
+the shop that it
+*the shop that is
+
+
+
+username generator

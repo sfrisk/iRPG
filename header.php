@@ -2,6 +2,11 @@
 	// © 2009 rpgalot
 	// Programed by Sarah, who is totally awesome
 
+	foreach(glob('includes/*.php') as $class_filename) 
+	{
+	     require_once($class_filename);
+	}
+
 ?>
 
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -24,7 +29,7 @@
 		<?php if(!empty($_SESSION['user'])){ ?>
 			<li><a href="home.php">Profile</a></li>
 			<li>Character</li>
-			<li>Account</li>
+			<li><a href="account.php">Settings</li>
 			<li><a href="logout.php">Logout<a></li>
 		<? } else{ ?>
 		<li><a href="index.php">Login</a></li>

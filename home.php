@@ -1,10 +1,11 @@
 <?php session_start();
 
-foreach(glob('includes/*.php') as $class_filename) {
+foreach(glob('includes/*.php') as $class_filename) 
+{
      require_once($class_filename);
 }
 
-$user = $_SESSION['user'];
+$user = new user($_SESSION['user']);
 
 if(empty($user))
 {
@@ -16,24 +17,25 @@ include('header.php');
 ?>
 		<div class="content">
 		<h1>
-			<img src ="<?= Gravatar::creat($user['email']) ?>" />
-			<?= $user['username'] ?>
+			<img src ="<?= Gravatar::creat($user->email) ?>" />
+			<?= $user->username ?>
 		</h1>
 
 		<p>	
-			<span class="bold">Name:</span> REAL NAME
+			<? if(!empty($user->name)){?>
+			<span class="bold">Name:</span> <?= $user->name ?>
 			<br />
-			<span class="bold">Location:</span> A LOCATION
+			<?} if(!empty($user->location)){?>
+			<span class="bold">Location:</span> <?= $user->location?>
 			<br />
-			<span class="bold">Age:</span> AN AGE
+			<?} if(!empty($user->birthday)){?>
+			<span class="bold">Birthday:</span> $user->birthday;?>
 			<br />
-			<span class="bold">Gender</span> GENDER
+			<?} if(!empty($user->gender)){?>
+			<span class="bold">Gender:</span> <?=$user->gender;?>
 			<br />
-			<span class="bold">E-mail:</span> <?=$user['email']; ?>
-			<br />
-			<span class="bold">Website:</span> WEBSITE
-			<br />
-			<span class="bold">AIM:</span> A USER NAME
+			<?}?>
+			<span class="bold">E-mail:</span> <?=$user->email; ?>
 			
 		</p>
 	

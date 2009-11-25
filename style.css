@@ -1,7 +1,7 @@
 body{
 		background-image:url('images/background_login.png');
 		/*background: #449fed;*/
-		padding-left:0px;
+		font-family: Gill, Helvetica, sans-serif;
 }
 
 ul{
@@ -11,6 +11,11 @@ ul{
 li{
 	display:inline;
 	margin-left: 10px;
+	margin-right: 10px;
+}
+
+label{
+	font-weight: bold; 
 }
 .content{
 	width: 800px;
@@ -38,11 +43,25 @@ li{
 	font-weight: bold; 
 }
 
+.italic{
+	font-style: italic; 
+}
+
+.account{
+	margin-right: 150px;
+	float: right;
+}
+
+.description{
+	font-size: 10px;
+	color: b8b8b8;
+	margin-top: 1px;
+}
+
 #sign{
 	width: 300px;
 	float:right;
 	margin-top: 100px;
-	border: 10px block solid;
 }
 
 #footer{
@@ -53,8 +72,47 @@ li{
 #header{
 	margin-top: 0px;;
 	padding-right: 50px;
+	width: 1000;
 }
 
 #toplinks{
 	float:right;
+	background: white;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	height: 30px;
+	padding-top: 10px;
+	padding-right: 20px;
+}
+
+#settinglinks{
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	height: 25px;
+	padding-top: 10px;
+	width: 760px;
+	background: #9cd0fc;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#right_content{
+	width: 300px;
+	float: right;
+}
+
+#left_content{
+	width: 480px;
 }

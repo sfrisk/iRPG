@@ -7,11 +7,6 @@
 -->
 	<?php session_start();
 
-	foreach(glob('includes/*.php') as $class_filename) 
-	{
-	     require_once($class_filename);
-	}
-
 	if(!empty($_SESSION['user']))
 	{
 		header('Location: home.php');

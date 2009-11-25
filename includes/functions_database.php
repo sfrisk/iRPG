@@ -40,6 +40,16 @@ class database
 			return false;
 	}
 
+
+	function update($table, $field, $value, $user_id)
+	{	
+		if($this->query("UPDATE $table SET $field = '$value' WHERE user_id  = '$user_id'"))
+			return true;
+		else 
+			return false;
+	}
+
+
 	function fetch($result=""){
 		if(empty($result))
 		{
@@ -50,7 +60,7 @@ class database
 
 	function __destruct()
 	{
-		mysql_close($this->link);
+		@mysql_close($this->link);
 	}
 
 }
