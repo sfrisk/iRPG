@@ -1,5 +1,5 @@
 body{
-		background-image:url('images/background_login.png');
+		background-image:url('../images/background_login.png');
 		/*background: #449fed;*/
 		font-family: Gill, Helvetica, sans-serif;
 }
@@ -115,4 +115,8 @@ label{
 
 #left_content{
 	width: 480px;
+}
+
+#avatar{
+	float: right;
 }

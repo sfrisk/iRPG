@@ -26,7 +26,7 @@ include('header.php');
 			<span class="bold">Name:</span> <?= $user->name ?>
 			<br />
 			<?} if(!empty($user->location)){?>
-			<span class="bold">Location:</span> <?= $user->location?>
+			<span class="bold">Location:</span> <?= $user->location;?>
 			<br />
 			<?} if(!empty($user->birthday)){?>
 			<span class="bold">Birthday:</span> $user->birthday;?>

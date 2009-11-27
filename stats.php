@@ -53,9 +53,8 @@ include('header.php');
 		<p>
 			<label for="gender">Gender:</label>
 			<select name="gender">
-				<option value="" selected="selected"> </option
-				<option value="Female">Female</option>
-				<option value="Male">Male</option>
+				<option value="Female" <?if($user->gender=="Female"){?>selected="selected"<?}?>)>Female</option>
+				<option value="Male" <?if($user->gender=="Male"){?>selected="selected"<?}?>>Male</option>
 			</select>
 		</p>
 		<p>

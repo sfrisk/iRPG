@@ -37,6 +37,7 @@ class user{
 			$this->salt = $row["salt"];
 			$this->name = $row["user_name"];
 			$this->gender = $row["user_gender"];
+			$this->location = $row["user_location"];
 		}		
 	}
 	
@@ -140,6 +141,11 @@ class user{
 	//	{
 	//	
 	//	}
+		if(!empty($location))
+		{
+			$this->setLocation($location);
+		}
+		echo "UPDATED!";
 	}
 	
 	function setName($name)
@@ -152,7 +158,6 @@ class user{
 	function setGender($gender)
 	{
 		global $db;
-		echo $gender;
 		$this->gender = $gender;
 		$db->update("rpg_users", "user_gender", $this->gender, $this->user_id);
 	}
@@ -164,8 +169,9 @@ class user{
 	function setLocation($location)
 	{
 		global $db;
-		$this->name = $name;
-		$db->update("rpg_users", "user_name", $this->name, $this->user_id);
+		echo $location;
+		$this->location = $location;
+		$db->update("rpg_users", "user_location", $this->location, $this->user_id);
 	}
 
 }
