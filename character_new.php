@@ -36,8 +36,8 @@ include('header.php');
 			
 			<label for="class">Class:</label>
 			<select name="class">
-				<option value="NO_CLASS"></option>
-				<option value="BARBARIAN">Barbarian</option>
+				<option value="<?=NO_CLASS?>"></option>
+				<option value="<?=BARBARIAN?>">Barbarian</option>
 				<option value="<?=BARD?>">Bard</option>
 				<option value="<?=CLERIC?>">Cleric</option>
 				<option value="<?=DRUID?>">Druid</option>
@@ -125,7 +125,7 @@ include('header.php');
 		
 		<div class = "right">
 		<!--This will be all calculated --!>
-		<table cellspacing="2" class="character_table">
+		<table cellspacing="0" class="character_table">
 		<tr class = "character_label">
 			<td></td>
 			<td>Total</td>
@@ -140,7 +140,7 @@ include('header.php');
 			<td></td>
 			<td>Natural<br />Armor</td>
 			<td></td>
-			<td>Deflection<br />Mod</td>
+			<td>Deflect.<br />Mod</td>
 			<td></td>
 			<td>Misc<br />Mod</td>
 		</tr>
@@ -148,102 +148,162 @@ include('header.php');
 				<td>AC <br /><span class="label">Armor Class</span></td>
 				<td><input type="text" name="total" size="3" / ></td>
 				<td>= 10 +</td>
-				<td><input disabled="disabled" type="text" name="armor_bonus" size="3" / ></td>
+				<td><input disabled="disabled" type="text" name="ARMOR_BONUS" size="3" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" name="shield_bonus" size="3" / ></td>
+				<td><input disabled="disabled" type="text" name="SHIELD_BONUS" size="3" / ></td>
 				<td> + </td>
 				<td><input disabled="disabled" type="text" name="DEX_MOD" size="3" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" name="size_mod" size="3" / ></td>
+				<td><input disabled="disabled" type="text" name="SIZE_MOD" size="3" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" name="natural_armor" size="3" / ></td>
+				<td><input disabled="disabled" type="text" name="NATURAL_ARMOR" size="3" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" name="deflection_mod" size="3" / ></td>
+				<td><input disabled="disabled" type="text" name="DEFLECTION_MOD" size="3" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" name="misc_mod" size="3" / ></td>
+				<td><input disabled="disabled" type="text" name="MISC_MOD_ARMOR_CLASS" size="3" / ></td>
 			</tr>
 		</table>
 		
 		<table cellspacing="0" class="character_table2">
 		<tr>
 			<td>Touch<br /><span class="label">Armor Class</span></td>
-			<td><input disabled="disabled" type="text" name="touch" size="3" / ></td>
+			<td><input disabled="disabled" type="text" name="TOUCH" size="3" / ></td>
 		</tr>
 		</table>
 		
 		<table cellspacing="0" class="character_table2">
 		<tr>
 			<td>Flat-Footed<br /><span class="label">Armor Class</span></td>
-			<td><input disabled="disabled" type="text" name="touch" size="3" / ></td>
+			<td><input disabled="disabled" type="text" name="FLAT_FOOTED" size="3" / ></td>
 		</tr>
 		</table>
 		
 		<table cellspacing="0" class="character_table2">
 		<tr>
 			<td>HP<br /><span class="label">Hit Points</span></td>
-			<td><input disabled="disabled" type="text" name="hp" size="3" / ></td>
+			<td><input disabled="disabled" type="text" name="HIT_POINTS" size="3" / ></td>
+		</tr>
+		</table>	
+		<table cellspacing="0" class="character_table2">
+		<tr>
+			<td>Speed</td>
+			<td><input disabled="disabled" type="text" name="SPEED" size="3" / ></td>
+		</tr>
+		</table>
+
+		<table cellspacing="0" class="character_table2">
+		<tr>
+			<td>Base Attack Bonus</td>
+			<td><input disabled="disabled" type="text" name="BASE_ATTACK_BONUS" size="3" / ></td>
+		</tr>
+		</table>
+		<table cellspacing="0" class="character_table2">
+		<tr>
+			<td>Spell Resistance</td>
+			<td><input disabled="disabled" type="text" name="SPELL_RESISTANCE" size="3" / ></td>
 		</tr>
 		</table>
 		
-		<table cellspacing="0" class="character_table">
+
+		<table cellspacing="0" class="character_table3">
 		<tr class = "character_label">
 			<td></td>
 			<td>Total</td>
 			<td></td>
-			<td>Dex<br />Mod</td>
+			<td>Base Attack<br />Bonus</td>
+			<td></td>
+			<td>Str. Mod</td>
+			<td></td>
+			<td>Size Mod</td>
 			<td></td>
 			<td>Misc<br />Mod</td>
-		<tr>
-		<tr>
-			<td><br />Initiative<br /><span class="label">Modifier</span></td>
-			<td><input disabled="disabled" type="text" name="total" size="3" / ></td>
-			<td> = </td>
-			<td><input disabled="disabled" type="text" name="DEX_MOD" size="3" / ></td>
-			<td> + </td>
-			<td><input disabled="disabled" type="text" name="MISC_MOD" size="3" / ></td>
 		</tr>
+			<tr>
+				<td>Grapple<br /><span class="label">Modifier</span></td>
+				<td><input disabled="disabled" type="text" name="TOTA_GRAPPLE" size="3" / ></td>
+				<td> = </td>
+				<td><input disabled="disabled" type="text" name="BASE_ATTACK_BONUS" size="3" / ></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" name="STR_MOD" size="3" / ></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" name="SIZE_MOD" size="3" / ></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" name="MISC_MOD_GRAPPLE" size="3" / ></td>
+			</tr>
 		</table>
-				
+
+		<table cellspacing="0" class="character_table3">
+			<tr class = "character_label">
+				<td></td>
+				<td>Total</td>
+				<td></td>
+				<td>Dex. Mod</td>
+				<td></td>
+				<td>Misc. Mod</td>
+			<tr>
+			<tr>
+				<td><br />Initiative<br /><span class="label">Modifier</span></td>
+				<td><input disabled="disabled" type="text" name="TOTAL_INITIATIVE" size="3" / ></td>
+				<td>&nbsp;=&nbsp;</td>
+				<td><input disabled="disabled" type="text" name="DEX_MOD" size="3" / ></td>
+				<td>&nbsp;+&nbsp;</td>
+				<td><input disabled="disabled" type="text" name="MISC_MOD" size="3" / ></td>
+			</tr>
+			</table>
+		
+		
 		
 		</div>
 		
-		<table cellspacing="2">
-			<tr class = "character_label">
-				<td><span class="bold">Ability <br />Name</span></td>
-				<td><span class="bold">Ability <br />Score</span></td>
-				<td><span class="bold">Ability <br />Modifier</span></td>
-				</tr>
-		</table>
 		<table cellspacing="2" class="character_table">
-			<tr>
-				<td><label for="STR">STR<br /><span class="label">Strength</span></td>
-				<td><input type="text" name="STR" size="3" / ></td>
-				<td><input disabled="disabled" type="text" name="STR_MOD" size="3" /></td
+			<tr class = "character_label">
+				<td>Ability <br />Name</td>
+				<td>Ability <br />Score</td>
+				<td>Ability <br />Mod</td>
+				<td>Temp<br />Score</td>
+				<td>Temp<br />Mod</td>
 			</tr>
 			<tr>
-				<td><label for="DEX">DEX<br /><span class="label">Dexterity</span></td>
-				<td><input type="text" name="DEX" size="3" / ></td>
-				<td><input disabled="disabled" type="text" name="DEX_MOD" size="3" /></td
+				<td>STR<br /><span class="label">Strength</span></td>
+				<td><input type="text" id="STR" size="3" value="0" onChange="setMod(this.value, this.id);" /></td>
+				<td><input disabled="disabled" type="text" id="STR_MOD" size="3" /></td
+				<td><input disabled="disabled" type="text" id="STR_SCORE_TEMP" size="3" /></td
+				<td><input disabled="disabled" type="text" id="STR_MOD_TEMP" size="3" /></td
 			</tr>
 			<tr>
-				<td><label for="CON">CON<br /><span class="label">Constitution</span></td>
-				<td><input type="text" name="CON" size="3" / ></td>
-				<td><input disabled="disabled" type="text" name="CON_MOD" size="3" /></td
+				<td>DEX<br /><span class="label">Dexterity</span></td>
+				<td><input type="text" id="DEX" size="3" value="0" onChange="setMod(this.value, this.id);" /></td>
+				<td><input disabled="disabled" type="text" id="DEX_MOD" size="3"  /></td>
+				<td><input disabled="disabled" type="text" id="DEX_SCORE_TEMP" size="3" /></td
+				<td><input disabled="disabled" type="text" id="DEX_MOD_TEMP" size="3" /></td
 			</tr>
 			<tr>
-				<td><label for="INT">INT<br /><span class="label">Intelligence</span></td>
-				<td><input type="text" name="INT" size="3" / ></td>
-				<td><input disabled="disabled" type="text" name="INT_MOD" size="3" /></td
+				<td>CON<br /><span class="label">Constitution</span></td>
+				<td><input type="text" id="CON" size="3" value="0" onChange="setMod(this.value, this.id);" /></td>
+				<td><input disabled="disabled" type="text" id="CON_MOD" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="CON_SCORE_TEMP" size="3" /></td
+				<td><input disabled="disabled" type="text" id="CON_MOD_TEMP" size="3" /></td
 			</tr>
 			<tr>
-				<td><label for="WIS">WIS<br /><span class="label">Wisdom</span></td>
-				<td><input type="text" name="WIS" size="3" / ></td>
-				<td><input disabled="disabled" type="text" name="WIS_MOD" size="3" /></td
+				<td>INT<br /><span class="label">Intelligence</span></td>
+				<td><input type="text" id="INT" size="3" value="0" onChange="setMod(this.value, this.id);" /></td>
+				<td><input disabled="disabled" type="text" id="INT_MOD" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="INT_SCORE_TEMP" size="3" /></td
+				<td><input disabled="disabled" type="text" id="INT_MOD_TEMP" size="3" /></td
 			</tr>
 			<tr>
-				<td><label for="CHA">CHA<br /><span class="label">Charisma</span></td>
-				<td><input type="text" name="CHA" size="3" / ></td>
-				<td><input disabled="disabled" type="text" name="CHA_MOD" size="3" /></td
+				<td>WIS<br /><span class="label">Wisdom</span></td>
+				<td><input type="text" id="WIS" size="3" value="0" onChange="setMod(this.value, this.id);" /></td>
+				<td><input disabled="disabled" type="text" id="WIS_MOD" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="WIS_SCORE_TEMP" size="3" /></td
+				<td><input disabled="disabled" type="text" id="WIS_MOD_TEMP" size="3" /></td
+			</tr>
+			<tr>
+				<td>CHA<br /><span class="label">Charisma</span></td>
+				<td><input type="text" id="CHA" size="3" onChange="setMod(this.value, this.id);" /></td>
+				<td><input disabled="disabled" type="text" id="CHA_MOD" size="3"  /></td>
+				<td><input disabled="disabled" type="text" id="CHA_SCORE_TEMP" size="3" /></td
+				<td><input disabled="disabled" type="text" id="CHA_MOD_TEMP" size="3" /></td
 			</tr>
 		</table>
 		<p>

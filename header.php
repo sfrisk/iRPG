@@ -13,6 +13,7 @@
 	<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 	<link rel="stylesheet" type="text/css" href="style/style.css" />	
 	<link rel="stylesheet" type="text/css" href="style/character_sheet.css" />
+	<script type="text/javascript" src="js/character_calculations.js"></script>
 		<head>
 
 			<title>rpgalot</title>
