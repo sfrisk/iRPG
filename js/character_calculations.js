@@ -1,6 +1,7 @@
 window.onload = setup;
 
 var numericExpression = /^[0-9]+$/;
+var formerRace = 'NO_RACE';
 
 function setup(){
 	
@@ -73,16 +74,123 @@ function setMod(element){
 }
 
 function setRace(){
-	if(race == "HUMAN" || race == "DWARF" || race == "ELF" || race == "HALF-ELF" || race == "HALF-ORC"){
-		//size = medium
-		document.getElementById('size').value = "MEDIUM";
+	var race = document.getElementById('race').value;
+	//races are: HUMAN, DWARF, ELF, HALF-ELF, HALF-ORC, GNOME, HALFLING
+	unsetRace();
+	if (race == "NO_RACE"){
+		setNoRace;
 	}
-	else if(race == "GNOME" || race == "HALFLING")
-	{
-		document.getElementById('size').value = "SMALL";
+
+	if (race == "HUMAN"){
+		setHuman;
 	}
-	else
-	{
-		document.getElementById('size').value = "NO_SIZE";
+	if (race == "DWARF"){
+		setDwarf;
 	}
+	if (race == "ELF"){
+		setElf;
+	}
+	if (race =="HALF-ELF"){
+		setHalfElf;
+	}
+	if (race =="HALF-ORC"){
+		setHalfOrc;
+	}
+	if (race == "GNOME"){
+		setGnome;
+	}
+	if (race == "HALFLING"){
+		setHalfling;
+	}
+	formerRace = race;
+}
+
+function unsetRace(){
+	if (formerRace == "NO_RACE"){
+		unsetNoRace;
+	}
+
+	if (formerRace == "HUMAN"){
+		unsetHuman;
+	}
+	if (formerRace == "DWARF"){
+		unsetDwarf;
+	}
+	if (formerRace == "ELF"){
+		unsetElf;
+	}
+	if (formerRace =="HALF-ELF"){
+		unsetHalfElf;
+	}
+	if (formerRace =="HALF-ORC"){
+		unsetHalfOrc;
+	}
+	if (formerRace == "GNOME"){
+		unsetGnome;
+	}
+	if (formerRace == "HALFLING"){
+		unsetHalfling;
+	}
+}
+
+function setMedium(){
+	document.getElementById("size").value = "MEDIUM";
+}
+
+function setSmall(){
+	document.getElementById("size").value = "SMALL";
+}
+
+function setNoSize(){
+	document.getElementById("size").value = "NO_SIZE";
+}
+
+function setNoRace(){
+	//do nothing
+}
+function setHuman(){
+	setMedium;
+}
+function setDwarf(){
+	setMedium;
+}
+function setElf(){
+	setMedium;
+}
+function setHalfElf(){
+	setMedium;
+}
+function setHalfOrc(){
+	setMedium;
+}
+function setGnome(){
+	setSmall;
+}
+function setHalfling(){
+	setSmall;
+}
+
+function unsetNoRace(){
+	//do nothing
+}
+function unsetHuman(){
+	setNoSize;
+}
+function unsetDwarf(){
+	setNoSize;
+}
+function unsetElf(){
+	setNoSize;	
+}
+function unsetHalfElf(){
+	setNoSize;	
+}
+function unsetHalfOrc(){
+	setNoSize;	
+}
+function unsetGnome(){
+	setNoSize;	
+}
+function unsetHalfling(){
+	setNoSize;	
 }

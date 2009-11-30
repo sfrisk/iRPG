@@ -15,7 +15,7 @@ if(empty($user))
 include('header.php');
 ?>
 
-	<div class="content">
+<div class="content">
 
 <img id="avatar" src="images/avatars/generic.png" alt="generic" width="100px" />
 
@@ -258,52 +258,66 @@ include('header.php');
 		<table cellspacing="2" class="character_table">
 			<tr class = "character_label">
 				<td>Ability <br />Name</td>
-				<td>Ability <br />Score</td>
-				<td>Ability <br />Mod</td>
-				<td>Temp<br />Score</td>
-				<td>Temp<br />Mod</td>
+				<td>Ability <br />Raw Score</td>
+				<td></td>
+				<td>Misc <br /> Additions</td>
+				<td></td>
+				<td>Ability <br />Total Score</td>
+				<td>Ability<br />Mod</td>
 			</tr>
 			<tr>
 				<td>STR<br /><span class="label">Strength</span></td>
-				<td><input type="text" id="STR" size="3" value="0" /></td>
-				<td><input disabled="disabled" type="text" id="STR_MOD0" size="3" /></td
-				<td><input disabled="disabled" type="text" id="STR_SCORE_TEMP" size="3" /></td
-				<td><input disabled="disabled" type="text" id="STR_MOD_TEMP" size="3" /></td
+				<td><input type="text" id="STR" size="4" value="0" class="user_input"/></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="STR_MISC" size="3" /></td>
+				<td> = </td>
+				<td><input disabled="disabled" type="text" id="STR_TOTAL" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="STR_MOD0" size="3" /></td>
 			</tr>
 			<tr>
 				<td>DEX<br /><span class="label">Dexterity</span></td>
-				<td><input type="text" id="DEX" size="3" value="0" /></td>
-				<td><input disabled="disabled" type="text" id="DEX_MOD0" size="3"  /></td>
-				<td><input disabled="disabled" type="text" id="DEX_SCORE_TEMP" size="3" /></td
-				<td><input disabled="disabled" type="text" id="DEX_MOD_TEMP" size="3" /></td
+				<td><input type="text" id="DEX" size="4" value="0" class="user_input" /></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="DEX_MISC" size="3"  /></td>
+				<td> = </td>
+				<td><input disabled="disabled" type="text" id="DEX_TOTAL" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="DEX_MOD0" size="3" /></td>
 			</tr>
 			<tr>
 				<td>CON<br /><span class="label">Constitution</span></td>
-				<td><input type="text" id="CON" size="3" value="0" /></td>
+				<td><input type="text" id="CON" size="4" value="0" class="user_input"/></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="CON_MISC" size="3" /></td>
+				<td> = </td>
+				<td><input disabled="disabled" type="text" id="CON_TOTAL" size="3" /></td>
 				<td><input disabled="disabled" type="text" id="CON_MOD0" size="3" /></td>
-				<td><input disabled="disabled" type="text" id="CON_SCORE_TEMP" size="3" /></td
-				<td><input disabled="disabled" type="text" id="CON_MOD_TEMP" size="3" /></td
 			</tr>
 			<tr>
 				<td>INT<br /><span class="label">Intelligence</span></td>
-				<td><input type="text" id="INT" size="3" value="0" /></td>
+				<td><input type="text" id="INT" size="4" value="0" class="user_input" /></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="INT_MISC" size="3" /></td>
+				<td> = </td>
+				<td><input disabled="disabled" type="text" id="INT_TOTAL" size="3" /></td>
 				<td><input disabled="disabled" type="text" id="INT_MOD0" size="3" /></td>
-				<td><input disabled="disabled" type="text" id="INT_SCORE_TEMP" size="3" /></td
-				<td><input disabled="disabled" type="text" id="INT_MOD_TEMP" size="3" /></td
 			</tr>
 			<tr>
 				<td>WIS<br /><span class="label">Wisdom</span></td>
-				<td><input type="text" id="WIS" size="3" value="0" /></td>
+				<td><input type="text" id="WIS" size="4" value="0" class="user_input"/></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="WIS_MISC" size="3" /></td>
+				<td> = </td>
+				<td><input disabled="disabled" type="text" id="WIS_TOTAL" size="3" /></td>
 				<td><input disabled="disabled" type="text" id="WIS_MOD0" size="3" /></td>
-				<td><input disabled="disabled" type="text" id="WIS_SCORE_TEMP" size="3" /></td
-				<td><input disabled="disabled" type="text" id="WIS_MOD_TEMP" size="3" /></td
 			</tr>
 			<tr>
 				<td>CHA<br /><span class="label">Charisma</span></td>
-				<td><input type="text" id="CHA" size="3" value="0"  /></td>
-				<td><input disabled="disabled" type="text" id="CHA_MOD0" size="3"  /></td>
-				<td><input disabled="disabled" type="text" id="CHA_SCORE_TEMP" size="3" /></td
-				<td><input disabled="disabled" type="text" id="CHA_MOD_TEMP" size="3" /></td
+				<td><input type="text" id="CHA" size="4" value="0"  class="user_input"/></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="CHA_MISC" size="3"  /></td>
+				<td> = </td>
+				<td><input disabled="disabled" type="text" id="CHA_TOTAL" size="3" /></td
+				<td><input disabled="disabled" type="text" id="CHA_MOD0" size="3" /></td>
 			</tr>
 		</table>
 		<p>

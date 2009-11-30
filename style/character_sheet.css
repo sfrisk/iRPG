@@ -11,6 +11,7 @@
 	margin-top: 10px;
 }
 .character_table2{
+	font-size: 14px;
 	text-align: center;
 	float: left;
 	border: 2px black solid;
@@ -23,6 +24,7 @@
 }
 
 .character_table3{
+	font-size: 14px;
 	float: left;
 	border: 2px black solid;
 	-moz-border-radius-topleft: 5px;
@@ -53,5 +55,9 @@
 }
 .right{
 	float:right;
-	width: 570px;
+	width: 550px;
+}
+
+.user_input{
+	border: 1px red solid;
 }
