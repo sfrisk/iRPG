@@ -164,6 +164,57 @@ include('header.php');
 			</tr>
 		</table>
 		
+		<table cellspacing="2" class="character_table3">
+			<tr class = "character_label">
+				<td>Saving Throws</td>
+				<td>Total</td>
+				<td></td>
+				<td>Base<br />Save</td>
+				<td></td>
+				<td>Ability<br />Modifier</td>
+				<td></td>
+				<td>Magic<br />Modifier</td>
+				<td></td>
+				<td>Misc<br />Modifier</td>
+			</tr>
+			<tr>
+				<td>Fortitude<br /><span class="label">(Constitution)</span></td>
+				<td><input disabled="disabled" type="text" id="FORT_TOTAL" value="0" size="3" /></td>
+				<td> = </td>
+				<td><input disabled="disabled" type="text" id="FORT_BASE_SAVE" value="0" size="3" /></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="CON_MOD1" value="0" size="3" /></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="FORT_MAGIC_MOD" value="0" size="3" /></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="FORT_MISC_MOD" value="0" size="3" /></td>
+			</tr>
+			<tr>
+				<td>Reflex<br /><span class="label">(Dexterity)</span></td>
+				<td><input disabled="disabled" type="text" id="REFLEX_TOTAL" value="0" size="3" /></td>
+				<td> = </td>
+				<td><input disabled="disabled" type="text" id="REFLEX_BASE_SAVE" value="0" size="3" /></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="DEX_MOD3" value="0" size="3" /></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="REFLEX_MAGIC_MOD" value="0" size="3" /></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="REFLEX_MISC_MOD" value="0" size="3" /></td>
+			</tr>
+			<tr>
+				<td>Will<br /><span class="label">(Wisdom)</span></td>
+				<td><input disabled="disabled" type="text" id="WILL_TOTAL" value="0" size="3" /></td>
+				<td> = </td>
+				<td><input disabled="disabled" type="text" id="WILL_BASE_SAVE" value="0" size="3" /></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="WIS_MOD1" value="0" size="3" /></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="WILL_MAGIC_MOD" value="0" size="3" /></td>
+				<td> + </td>
+				<td><input disabled="disabled" type="text" id="WILL_MISC_MOD" value="0" size="3" /></td>
+			</tr>
+		</table>
+		
 		<table cellspacing="0" class="character_table2">
 		<tr>
 			<td>Touch<br /><span class="label">Armor Class</span></td>
@@ -184,20 +235,21 @@ include('header.php');
 			<td><input disabled="disabled" type="text" id="HIT_POINTS" size="3" / ></td>
 		</tr>
 		</table>	
-		<table cellspacing="0" class="character_table2">
+		<table cellspacing="0" class="character_table4">
 		<tr>
 			<td>Speed</td>
 			<td><input disabled="disabled" type="text" id="SPEED" size="3" / ></td>
+			<td> ft. </td>
 		</tr>
 		</table>
 
-		<table cellspacing="0" class="character_table2">
+		<table cellspacing="0" class="character_table4">
 		<tr>
 			<td>Base Attack Bonus</td>
 			<td><input disabled="disabled" type="text" id="BASE_ATTACK_BONUS" size="3" / ></td>
 		</tr>
 		</table>
-		<table cellspacing="0" class="character_table2">
+		<table cellspacing="0" class="character_table4">
 		<tr>
 			<td>Spell Resistance</td>
 			<td><input disabled="disabled" type="text" id="SPELL_RESISTANCE" size="3" / ></td>
@@ -272,7 +324,7 @@ include('header.php');
 				<td><input disabled="disabled" type="text" id="STR_MISC" value="0" size="3" /></td>
 				<td> = </td>
 				<td><input disabled="disabled" type="text" id="STR_TOTAL" value="0" size="3" /></td>
-				<td><input disabled="disabled" type="text" id="STR_MOD0" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="STR_MOD0" value="-5" size="3" /></td>
 			</tr>
 			<tr>
 				<td>DEX<br /><span class="label">Dexterity</span></td>
@@ -281,7 +333,7 @@ include('header.php');
 				<td><input disabled="disabled" type="text" id="DEX_MISC" value="0" size="3"  /></td>
 				<td> = </td>
 				<td><input disabled="disabled" type="text" id="DEX_TOTAL" value="0" size="3" /></td>
-				<td><input disabled="disabled" type="text" id="DEX_MOD0" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="DEX_MOD0" value="-5" size="3" /></td>
 			</tr>
 			<tr>
 				<td>CON<br /><span class="label">Constitution</span></td>
@@ -290,7 +342,7 @@ include('header.php');
 				<td><input disabled="disabled" type="text" id="CON_MISC" value="0" size="3" /></td>
 				<td> = </td>
 				<td><input disabled="disabled" type="text" id="CON_TOTAL" value="0" size="3" /></td>
-				<td><input disabled="disabled" type="text" id="CON_MOD0"value="0"  size="3" /></td>
+				<td><input disabled="disabled" type="text" id="CON_MOD0" value="-5"  size="3" /></td>
 			</tr>
 			<tr>
 				<td>INT<br /><span class="label">Intelligence</span></td>
@@ -299,7 +351,7 @@ include('header.php');
 				<td><input disabled="disabled" type="text" id="INT_MISC" value="0" size="3" /></td>
 				<td> = </td>
 				<td><input disabled="disabled" type="text" id="INT_TOTAL" value="0" size="3" /></td>
-				<td><input disabled="disabled" type="text" id="INT_MOD0" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="INT_MOD0" value="-5" size="3" /></td>
 			</tr>
 			<tr>
 				<td>WIS<br /><span class="label">Wisdom</span></td>
@@ -308,7 +360,7 @@ include('header.php');
 				<td><input disabled="disabled" type="text" id="WIS_MISC" value="0" size="3" /></td>
 				<td> = </td>
 				<td><input disabled="disabled" type="text" id="WIS_TOTAL" value="0" size="3" /></td>
-				<td><input disabled="disabled" type="text" id="WIS_MOD0" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="WIS_MOD0" value="-5" size="3" /></td>
 			</tr>
 			<tr>
 				<td>CHA<br /><span class="label">Charisma</span></td>
@@ -317,7 +369,7 @@ include('header.php');
 				<td><input disabled="disabled" type="text" id="CHA_MISC" value="0" size="3"  /></td>
 				<td> = </td>
 				<td><input disabled="disabled" type="text" id="CHA_TOTAL" value="0" size="3" /></td
-				<td><input disabled="disabled" type="text" id="CHA_MOD0" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="CHA_MOD0" value="-5" size="3" /></td>
 			</tr>
 		</table>
 		<p>
