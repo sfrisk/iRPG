@@ -7,7 +7,7 @@ foreach(glob('includes/*.php') as $class_filename)
 
 $user = new user($_SESSION['user']);
 
-if(empty($user))
+if(empty($user->password))
 {
 	header('Location: index.php');
 }
@@ -106,9 +106,9 @@ include('header.php');
 
 			<label for"size">Size</label>
 			<select id="size">
-				<option value="NO_SIZE"></option>
-				<option value="SMALL">Small</option>
-				<option value="MEDIUM">Medium</option>
+				<option value="NO_SIZE" id="NO_SIZE"></option>
+				<option value="SMALL" id="SMALL">Small</option>
+				<option value="MEDIUM" id="MEDIUM">Medium</option>
 			</select>
 
 			<label for="age">Age:</label>
@@ -235,11 +235,12 @@ include('header.php');
 			<td><input disabled="disabled" type="text" id="HIT_POINTS" size="3" / ></td>
 		</tr>
 		</table>	
+
 		<table cellspacing="0" class="character_table4">
 		<tr>
 			<td>Speed</td>
 			<td><input disabled="disabled" type="text" id="SPEED" size="3" / ></td>
-			<td> ft. </td>
+			<td>&nbsp;&nbsp; ft. </td>
 		</tr>
 		</table>
 

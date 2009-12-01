@@ -30,7 +30,7 @@
 		<li>About</li>
 		<?php if(!empty($_SESSION['user'])){ ?>
 			<li><a href="home.php">Profile</a></li>
-			<li>Character</li>
+			<li><a href="character_new.php">Character</a></li>
 			<li><a href="account.php">Settings</li>
 			<li><a href="logout.php">Logout<a></li>
 		<? } else{ ?>

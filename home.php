@@ -7,7 +7,7 @@ foreach(glob('includes/*.php') as $class_filename)
 
 $user = new user($_SESSION['user']);
 
-if(empty($user))
+if(empty($user->password))
 {
 	header('Location: index.php');
 }

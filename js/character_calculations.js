@@ -149,15 +149,48 @@ function unsetRace(){
 }
 
 function setMedium(){
+	//no size mod
 	document.getElementById("size").value = "MEDIUM";
+	document.getElementById("SMALL").disabled=true;
+	document.getElementById("NO_SIZE").disabled=true;
+	document.getElementById("MEDIUM").disabled=false;
+	var i = 0;
+	while(document.getElementById("SIZE_MOD"+i) != null)
+	{
+		document.getElementById("SIZE_MOD"+i).value = 0;
+		i++;
+	}
+	
 }
 
 function setSmall(){
+	
+	//size mod = +1
 	document.getElementById("size").value = "SMALL";
+	document.getElementById("SMALL").disabled=false;
+	document.getElementById("NO_SIZE").disabled=true;
+	document.getElementById("MEDIUM").disabled=true;
+	var i = 0;
+	while(document.getElementById("SIZE_MOD"+i) != null)
+	{
+		document.getElementById("SIZE_MOD"+i).value = 1;
+		i++;
+	}
 }
 
 function setNoSize(){
+	
+	//no size mod
 	document.getElementById("size").value = "NO_SIZE";
+	document.getElementById("SMALL").disabled=true;
+	document.getElementById("NO_SIZE").disabled=false;
+	document.getElementById("MEDIUM").disabled=true;
+	var i = 0;
+	while(document.getElementById("SIZE_MOD"+i) != null)
+	{
+		document.getElementById("SIZE_MOD"+i).value = 0;
+		i++;
+	}
 }
 
 function setNoRace(){
@@ -215,6 +248,9 @@ function setHalfling(){
 	document.getElementById("SPEED").value = 20;
 	setMiscAbility("DEX", 2);
 	setMiscAbility("STR", -2);
+	document.getElementById("FORT_MISC_MOD").value = parseInt(document.getElementById("FORT_MISC_MOD").value) + 1;
+	document.getElementById("REFLEX_MISC_MOD").value = parseInt(document.getElementById("REFLEX_MISC_MOD").value) + 1;
+	document.getElementById("WILL_MISC_MOD").value = parseInt(document.getElementById("WILL_MISC_MOD").value) + 1;	
 	setSmall();
 }
 
