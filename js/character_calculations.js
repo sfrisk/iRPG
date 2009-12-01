@@ -63,7 +63,9 @@ function setMod(element){
 	}		
 	else
 	{
-		var mod = Math.floor(ability / 2) - 5;
+		var total = parseInt(ability) + parseInt(document.getElementById(element+"_MISC").value);
+		document.getElementById(element+"_TOTAL").value = total;
+		var mod = Math.floor(total / 2) - 5;
 		var i = 0;
 		while(document.getElementById(element+"_MOD"+i) != null)
 		{
@@ -74,62 +76,62 @@ function setMod(element){
 }
 
 function setRace(){
+	
 	var race = document.getElementById('race').value;
 	//races are: HUMAN, DWARF, ELF, HALF-ELF, HALF-ORC, GNOME, HALFLING
-	unsetRace();
+//	unsetRace();
 	if (race == "NO_RACE"){
-		setNoRace;
+		setNoRace();
 	}
 
-	if (race == "HUMAN"){
-		setHuman;
+	else if (race == "HUMAN"){
+		setHuman();
 	}
-	if (race == "DWARF"){
-		setDwarf;
+	else if (race == "DWARF"){
+		setDwarf();
 	}
-	if (race == "ELF"){
-		setElf;
+	else if (race == "ELF"){
+		setElf();
 	}
-	if (race =="HALF-ELF"){
-		setHalfElf;
+	else if (race =="HALF-ELF"){
+		setHalfElf();
 	}
-	if (race =="HALF-ORC"){
-		setHalfOrc;
+	else if (race =="HALF-ORC"){
+		setHalfOrc();
 	}
-	if (race == "GNOME"){
-		setGnome;
+	else if (race == "GNOME"){
+		setGnome();
 	}
-	if (race == "HALFLING"){
-		setHalfling;
+	else if (race == "HALFLING"){
+		setHalfling();
 	}
 	formerRace = race;
 }
 
 function unsetRace(){
 	if (formerRace == "NO_RACE"){
-		unsetNoRace;
+		unsetNoRace();
 	}
-
-	if (formerRace == "HUMAN"){
-		unsetHuman;
+	else if(formerRace == "HUMAN"){
+		unsetHuman();
 	}
-	if (formerRace == "DWARF"){
-		unsetDwarf;
+	else if (formerRace == "DWARF"){
+		unsetDwarf();
 	}
-	if (formerRace == "ELF"){
-		unsetElf;
+	else if(formerRace == "ELF"){
+		unsetElf();
 	}
-	if (formerRace =="HALF-ELF"){
-		unsetHalfElf;
+	else if(formerRace =="HALF-ELF"){
+		unsetHalfElf();
 	}
-	if (formerRace =="HALF-ORC"){
-		unsetHalfOrc;
+	else if(formerRace =="HALF-ORC"){
+		unsetHalfOrc();
 	}
-	if (formerRace == "GNOME"){
-		unsetGnome;
+	else if(formerRace == "GNOME"){
+		unsetGnome();
 	}
-	if (formerRace == "HALFLING"){
-		unsetHalfling;
+	else if(formerRace == "HALFLING"){
+		unsetHalfling();
 	}
 }
 
@@ -148,49 +150,72 @@ function setNoSize(){
 function setNoRace(){
 	//do nothing
 }
-function setHuman(){
-	setMedium;
+function setHuman()
+{
+	//no ability adjustments
+	//speed = 30ft
+	setMedium();
+	document.getElementById("SPEED").value = "30ft";
+	document.getElementById("GARL_GLITTERGOLD").disabled=true;
 }
 function setDwarf(){
-	setMedium;
+	//+2 Constitution, -2 Charisma
+	//speed = 20ft (this is for medium or heavy armor)
+	document.getElementById("SPEED").value = "20ft";
+	setMedium();
 }
 function setElf(){
-	setMedium;
+	//+2 Dexterity, -2 Constitution
+	//speed = 30ft
+	document.getElementById("SPEED").value = "30ft";
+	setMedium();
 }
 function setHalfElf(){
-	setMedium;
+	//No ability adjustments
+	//speed = 30ft
+	document.getElementById("SPEED").value = "30ft";
+	setMedium();
 }
 function setHalfOrc(){
-	setMedium;
+	//+2 Strength, -2 Intelligence (INT score must be at least 3), -2 Charisma
+	//speed = 30ft
+	document.getElementById("SPEED").value = "30ft";
+	setMedium();
 }
 function setGnome(){
-	setSmall;
+	//+2 Constitution, -2 Strength
+	//speed = 20ft
+	document.getElementById("SPEED").value = "20ft";
+	setSmall();
 }
 function setHalfling(){
-	setSmall;
+	//+2 Dexterity, -2 Strength
+	//speed = 20ft
+	document.getElementById("SPEED").value = "20ft";
+	setSmall();
 }
 
 function unsetNoRace(){
 	//do nothing
 }
 function unsetHuman(){
-	setNoSize;
+	setNoSize();
 }
 function unsetDwarf(){
-	setNoSize;
+	setNoSize();
 }
 function unsetElf(){
-	setNoSize;	
+	setNoSize();	
 }
 function unsetHalfElf(){
-	setNoSize;	
+	setNoSize();	
 }
 function unsetHalfOrc(){
-	setNoSize;	
+	setNoSize();	
 }
 function unsetGnome(){
-	setNoSize;	
+	setNoSize();	
 }
 function unsetHalfling(){
-	setNoSize;	
+	setNoSize();	
 }

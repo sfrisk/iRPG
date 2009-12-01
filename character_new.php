@@ -36,18 +36,18 @@ include('header.php');
 			
 			<label for="class">Class:</label>
 			<select id="class">
-				<option value="<?=NO_CLASS?>"></option>
-				<option value="<?=BARBARIAN?>">Barbarian</option>
-				<option value="<?=BARD?>">Bard</option>
-				<option value="<?=CLERIC?>">Cleric</option>
-				<option value="<?=DRUID?>">Druid</option>
-				<option value="<?=FIGHTER?>">Fighter</option>
-				<option value="<?=MONK?>">Monk</option>
-				<option value="<?=PALADIN?>">Paladin</option>
-				<option value="<?=RANGER?>">Ranger</option>
-				<option value="<?=ROGUE?>">Rogue</option>
-				<option value="<?=SORCERER?>">Sorcerer</option>
-				<option value="<?=WIZARD?>">Wizard</option>
+				<option value="NO_CLASS" id="NO_CLASS"></option>
+				<option value="BARBARIAN" id="BARBARIAN">Barbarian</option>
+				<option value="BARD" id="BARD">Bard</option>
+				<option value="CLERIC" id="CLERIC">Cleric</option>
+				<option value="DRUID" id="DRUID">Druid</option>
+				<option value="FIGHTER" id="FIGHTER">Fighter</option>
+				<option value="MONK" id="MONK">Monk</option>
+				<option value="PALADIN" id="PALADIN">Paladin</option>
+				<option value="RANGER" id="RANGER">Ranger</option>
+				<option value="ROGUE" id="ROGUE">Rogue</option>
+				<option value="SORCERER" id="SORCERER">Sorcerer</option>
+				<option value="WIZARD" id=WIZARD>Wizard</option>
 			</select>
 
 			<label for="race">Race:</label>
@@ -67,41 +67,41 @@ include('header.php');
 
 			<label for="alignment">Alignment:</label>
 			<select id="alignment">
-				<option value="<?=NO_ALIGNMENT?>"> </option>
-				<option value="<?=LAWFUL_GOOD?>">Lawful Good</option>
-				<option value="<?=NEUTRAL_GOOD?>">Neutral Good</option>
-				<option value="<?=CHAOTIC_GOOD?>">Chaotic Good</option>
-				<option value="<?=LAWFUL_NEUTRAL?>">Lawful Neutral</option>
-				<option value="<?=NEUTRAL?>">Neutral</option>
-				<option value="<?=CHAOTIC_NEUTRAL?>">Chaotic Neutral</option>
-				<option value="<?=LAWFUL_EVIL?>">Lawful Evil</option>
-				<option value="<?=NEUTRAL_EVIL?>">Neutral Evil</option>
-				<option value="<?=CHAOTIC_EVIL?>">Chaotic Evil</option>
+				<option value="NO_ALIGNMENT"> </option>
+				<option value="LAWFUL GOOD">Lawful Good</option>
+				<option value="NEUTRAL GOOD">Neutral Good</option>
+				<option value="CHAOTIC GOOD">Chaotic Good</option>
+				<option value="LAWFUL NEUTRAL">Lawful Neutral</option>
+				<option value="NEUTRAL">Neutral</option>
+				<option value="CHAOTIC NEUTRAL">Chaotic Neutral</option>
+				<option value="LAWFUL EVIL">Lawful Evil</option>
+				<option value="NEUTRAL EVIL">Neutral Evil</option>
+				<option value="CHAOTIC EVIL">Chaotic Evil</option>
 			</select>
 
 			<label for="diety">Diety:</label>
 			<select id="diety">
-				<option value="<?=NO_DIETY?>">None</option>
-				<option value="<?=BOCCOB?>">Boccob</option>
-				<option value="<?=CORELLON_LARETHIAN?>">Corellon Larethian</option>
-				<option value="<?=EHLONNA?>">Ehlonna</option>
-				<option value="<?=ERYTHNUL?>">Erythnul</option>
-				<option value="<?=FHARLANGHN?>">Fharlanghn</option>
-				<option value="<?=GARL_GLITTERGOLD?>">Garl Glittergold</option>
-				<option value="<?=GRUUMSH?>">Gruumsh</option>
-				<option value="<?=HEIRONEOUS?>">Heironeous</option>
-				<option value="<?=HEXTOR?>">Hextor</option>
-				<option value="<?=KORD?>">Kord</option>
-				<option value="<?=MORADIN?>">Moradin</option>
-				<option value="<?=NERULL?>">Nerull</option>
-				<option value="<?=OBAD-HAI?>">Obad-Hai</option>
-				<option value="<?=OLIDAMMARA?>">Olidammara</option>
-				<option value="<?=PELOR?>">Pelor</option>
-				<option value="<?=ST_CUTHBERT?>">St. Cuthbert</option>
-				<option value="<?=VECNA?>">Vecna</option>
-				<option value="<?=WEE_JAS?>">Wee Jas</option>
-				<option value="<?=YONDALLA?>">Yondalla</option>
-				<option value="<?=OTHER?>">Other</option>
+				<option value="NO_DIETY">None</option>
+				<option value="BOCCOB">Boccob</option>
+				<option value="CORELLON_LARETHIAN">Corellon Larethian</option>
+				<option value="EHLONNA">Ehlonna</option>
+				<option value="ERYTHNUL">Erythnul</option>
+				<option value="FHARLANGHN">Fharlanghn</option>
+				<option value="GARL GLITTERGOLD" id ="GARL_GLITTERGOLD" >Garl Glittergold</option>
+				<option value="GRUUMSH">Gruumsh</option>
+				<option value="HEIRONEOUS">Heironeous</option>
+				<option value="HEXTOR">Hextor</option>
+				<option value="KORD">Kord</option>
+				<option value="MORADIN">Moradin</option>
+				<option value="NERULL">Nerull</option>
+				<option value="OBAD-HAI">Obad-Hai</option>
+				<option value="OLIDAMMARA">Olidammara</option>
+				<option value="PELOR?">Pelor</option>
+				<option value="ST_CUTHBERT">St. Cuthbert</option>
+				<option value="VECNA">Vecna</option>
+				<option value="WEE_JAS">Wee Jas</option>
+				<option value="YONDALLA">Yondalla</option>
+				<option value="OTHER">Other</option>
 			</select>
 
 			<label for"size">Size</label>
@@ -116,9 +116,9 @@ include('header.php');
 
 			<label for="gender">Gender:</label>
 			<select id="gender">
-				<option value="<?=NO_GENDER?>"></option>
-				<option value="<?=FEMALE?>">Female</option>
-				<option value="<?=MALE?>">Male</option>
+				<option value="NO_GENDER"></option>
+				<option value="FEMALE">Female</option>
+				<option value="MALE">Male</option>
 			</select>
 			
 		</p>
@@ -147,7 +147,7 @@ include('header.php');
 			<tr>
 				<td>AC <br /><span class="label">Armor Class</span></td>
 				<td><input type="text" id="total" size="3" / ></td>
-				<td>= 10 +</td>
+				<td>&nbsp;= 10 +</td>
 				<td><input disabled="disabled" type="text" id="ARMOR_BONUS" size="3" / ></td>
 				<td> + </td>
 				<td><input disabled="disabled" type="text" id="SHIELD_BONUS" size="3" / ></td>
@@ -269,55 +269,55 @@ include('header.php');
 				<td>STR<br /><span class="label">Strength</span></td>
 				<td><input type="text" id="STR" size="4" value="0" class="user_input"/></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="STR_MISC" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="STR_MISC" value="0" size="3" /></td>
 				<td> = </td>
-				<td><input disabled="disabled" type="text" id="STR_TOTAL" size="3" /></td>
-				<td><input disabled="disabled" type="text" id="STR_MOD0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="STR_TOTAL" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="STR_MOD0" value="0" size="3" /></td>
 			</tr>
 			<tr>
 				<td>DEX<br /><span class="label">Dexterity</span></td>
 				<td><input type="text" id="DEX" size="4" value="0" class="user_input" /></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="DEX_MISC" size="3"  /></td>
+				<td><input disabled="disabled" type="text" id="DEX_MISC" value="0" size="3"  /></td>
 				<td> = </td>
-				<td><input disabled="disabled" type="text" id="DEX_TOTAL" size="3" /></td>
-				<td><input disabled="disabled" type="text" id="DEX_MOD0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="DEX_TOTAL" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="DEX_MOD0" value="0" size="3" /></td>
 			</tr>
 			<tr>
 				<td>CON<br /><span class="label">Constitution</span></td>
 				<td><input type="text" id="CON" size="4" value="0" class="user_input"/></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="CON_MISC" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="CON_MISC" value="0" size="3" /></td>
 				<td> = </td>
-				<td><input disabled="disabled" type="text" id="CON_TOTAL" size="3" /></td>
-				<td><input disabled="disabled" type="text" id="CON_MOD0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="CON_TOTAL" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="CON_MOD0"value="0"  size="3" /></td>
 			</tr>
 			<tr>
 				<td>INT<br /><span class="label">Intelligence</span></td>
-				<td><input type="text" id="INT" size="4" value="0" class="user_input" /></td>
+				<td><input type="text" id="INT" size="4" value="0" value="0" class="user_input" /></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="INT_MISC" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="INT_MISC" value="0" size="3" /></td>
 				<td> = </td>
-				<td><input disabled="disabled" type="text" id="INT_TOTAL" size="3" /></td>
-				<td><input disabled="disabled" type="text" id="INT_MOD0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="INT_TOTAL" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="INT_MOD0" value="0" size="3" /></td>
 			</tr>
 			<tr>
 				<td>WIS<br /><span class="label">Wisdom</span></td>
 				<td><input type="text" id="WIS" size="4" value="0" class="user_input"/></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="WIS_MISC" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="WIS_MISC" value="0" size="3" /></td>
 				<td> = </td>
-				<td><input disabled="disabled" type="text" id="WIS_TOTAL" size="3" /></td>
-				<td><input disabled="disabled" type="text" id="WIS_MOD0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="WIS_TOTAL" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="WIS_MOD0" value="0" size="3" /></td>
 			</tr>
 			<tr>
 				<td>CHA<br /><span class="label">Charisma</span></td>
 				<td><input type="text" id="CHA" size="4" value="0"  class="user_input"/></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="CHA_MISC" size="3"  /></td>
+				<td><input disabled="disabled" type="text" id="CHA_MISC" value="0" size="3"  /></td>
 				<td> = </td>
-				<td><input disabled="disabled" type="text" id="CHA_TOTAL" size="3" /></td
-				<td><input disabled="disabled" type="text" id="CHA_MOD0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="CHA_TOTAL" value="0" size="3" /></td
+				<td><input disabled="disabled" type="text" id="CHA_MOD0" value="0" size="3" /></td>
 			</tr>
 		</table>
 		<p>
