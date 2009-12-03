@@ -202,7 +202,7 @@ function setHuman()
 	//speed = 30ft
 	setMedium();
 	document.getElementById("SPEED").value = 30;
-	document.getElementById("GARL_GLITTERGOLD").disabled=true;
+	document.getElementById("RACIAL_TRAITS").value = "HUMAN";
 }
 function setDwarf(){
 	//+2 Constitution, -2 Charisma
@@ -211,6 +211,7 @@ function setDwarf(){
 	setMiscAbility("CON", 2);
 	setMiscAbility("CHA", -2)
 	setMedium();
+	document.getElementById("RACIAL_TRAITS").value = "Darkvision, Stonecunning, Stability";
 }
 function setElf(){
 	//+2 Dexterity, -2 Constitution
@@ -219,12 +220,14 @@ function setElf(){
 	setMiscAbility("DEX", 2);
 	setMiscAbility("CON", -2);
 	setMedium();
+	document.getElementById("RACIAL_TRAITS").value = "Low-light Vision";
 }
 function setHalfElf(){
 	//No ability adjustments
 	//speed = 30ft
 	document.getElementById("SPEED").value = 30;
 	setMedium();
+	document.getElementById("RACIAL_TRAITS").value = "Immunity to sleep spells, Low-light Vision, Elven Blood";
 }
 function setHalfOrc(){
 	//+2 Strength, -2 Intelligence (INT score must be at least 3), -2 Charisma
@@ -233,6 +236,7 @@ function setHalfOrc(){
 	setMiscAbility("STR", 2);
 	setMiscAbility("INT", -2);
 	setMedium();
+	document.getElementById("RACIAL_TRAITS").value = "Darkvision, Orc Blood";
 }
 function setGnome(){
 	//+2 Constitution, -2 Strength
@@ -241,6 +245,7 @@ function setGnome(){
 	setMiscAbility("CON", 2);
 	setMiscAbility("STR", -2);
 	setSmall();
+	document.getElementById("RACIAL_TRAITS").value = "Low-Light Vision, +1 bonus on attack rolls against kobolds and goblinoids";
 }
 function setHalfling(){
 	//+2 Dexterity, -2 Strength
@@ -252,6 +257,7 @@ function setHalfling(){
 	document.getElementById("REFLEX_MISC_MOD").value = parseInt(document.getElementById("REFLEX_MISC_MOD").value) + 1;
 	document.getElementById("WILL_MISC_MOD").value = parseInt(document.getElementById("WILL_MISC_MOD").value) + 1;	
 	setSmall();
+	document.getElementById("RACIAL_TRAITS").value = "HALFLING";
 }
 
 function unsetNoRace(){

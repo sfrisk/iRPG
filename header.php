@@ -25,8 +25,8 @@
 		<img src="images/logo.png" alt="rpgalot" \>
 		
 		<ul id="toplinks">
-		<li>Blog</li>
 		<li>Features</li>
+		<li>Contact</li>
 		<li>About</li>
 		<?php if(!empty($_SESSION['user'])){ ?>
 			<li><a href="home.php">Profile</a></li>

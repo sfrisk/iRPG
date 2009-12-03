@@ -125,7 +125,7 @@ include('header.php');
 		
 		<div class = "right">
 		<!--This will be all calculated --!>
-		<table cellspacing="0" class="character_table">
+		<table cellspacing="0" class="ac">
 		<tr class = "character_label">
 			<td></td>
 			<td>Total</td>
@@ -163,6 +163,14 @@ include('header.php');
 				<td><input disabled="disabled" type="text" id="MISC_MOD_ARMOR_CLASS" size="3" / ></td>
 			</tr>
 		</table>
+		
+		<table cellspacing="0" class="conditional">
+		<tr>
+			<td>Conditional AC Modifiers</td>
+			<td class = "right_cell"><textarea name="CONDITIONAL_AC_MOD" rows="2" cols="45" disabled="disabled"></textarea></textarea></td>
+		</tr>
+		</table>		
+		
 		
 		<table cellspacing="2" class="character_table3">
 			<tr class = "character_label">
@@ -218,42 +226,41 @@ include('header.php');
 		<table cellspacing="0" class="character_table2">
 		<tr>
 			<td>Touch<br /><span class="label">Armor Class</span></td>
-			<td><input disabled="disabled" type="text" id="TOUCH" size="3" / ></td>
+			<td class = "right_cell"><input disabled="disabled" type="text" id="TOUCH" size="3" / ></td>
 		</tr>
 		</table>
 		
 		<table cellspacing="0" class="character_table2">
 		<tr>
 			<td>Flat-Footed<br /><span class="label">Armor Class</span></td>
-			<td><input disabled="disabled" type="text" id="FLAT_FOOTED" size="3" / ></td>
+			<td class = "right_cell"><input disabled="disabled" type="text" id="FLAT_FOOTED" size="3" / ></td>
 		</tr>
 		</table>
 		
 		<table cellspacing="0" class="character_table2">
 		<tr>
 			<td>HP<br /><span class="label">Hit Points</span></td>
-			<td><input disabled="disabled" type="text" id="HIT_POINTS" size="3" / ></td>
+			<td class = "right_cell"><input disabled="disabled" type="text" id="HIT_POINTS" size="3" / ></td>
 		</tr>
 		</table>	
 
-		<table cellspacing="0" class="character_table4">
+		<table cellspacing="0" class="character_table5">
 		<tr>
 			<td>Speed</td>
-			<td><input disabled="disabled" type="text" id="SPEED" size="3" / ></td>
-			<td>&nbsp;&nbsp; ft. </td>
+			<td class = "right_cell"><input disabled="disabled" type="text" id="SPEED" size="3" / ></td>
 		</tr>
 		</table>
 
 		<table cellspacing="0" class="character_table4">
 		<tr>
 			<td>Base Attack Bonus</td>
-			<td><input disabled="disabled" type="text" id="BASE_ATTACK_BONUS" size="3" / ></td>
+			<td class = "right_cell"><input disabled="disabled" type="text" id="BASE_ATTACK_BONUS" size="3" / ></td>
 		</tr>
 		</table>
 		<table cellspacing="0" class="character_table4">
 		<tr>
 			<td>Spell Resistance</td>
-			<td><input disabled="disabled" type="text" id="SPELL_RESISTANCE" size="3" / ></td>
+			<td class = "right_cell"><input disabled="disabled" type="text" id="SPELL_RESISTANCE" size="3" / ></td>
 		</tr>
 		</table>
 		
@@ -373,6 +380,42 @@ include('header.php');
 				<td><input disabled="disabled" type="text" id="CHA_MOD0" value="-5" size="3" /></td>
 			</tr>
 		</table>
+		
+		<table cellspacing="0" class="character_table">
+		<tr>
+			<td colspan="6" class="big_label">
+			Carrying Capacity
+			<td>
+		</tr>
+		<tr class = "character_label">
+			<td>Light Load</td>
+			<td>Medium Load</td>
+			<td>Heavy Load</td>
+			<td>Lift Overhead</td>
+			<td>Lift Off Ground</td>
+			<td>Push Or Drag</td>
+		</tr>
+		<tr>
+			<td><input disabled="disabled" type="text" id="LIGHT_LOAD" value="0" size="3" /></td>
+			<td><input disabled="disabled" type="text" id="MEDIUM_LOAD" value="0" size="3" /></td>
+			<td><input disabled="disabled" type="text" id="HEAVY_LOAD" value="0" size="3" /></td>
+			<td><input disabled="disabled" type="text" id="LIFT_OVERHEAD" value="0" size="3" /></td>
+			<td><input disabled="disabled" type="text" id="LIFT_OFF_GROUND" value="0" size="3" /></td>
+			<td><input disabled="disabled" type="text" id="PUSH" value="0" size="3" /></td>
+		</tr>
+		</table>
+		<table class="racial">
+			<tr>
+				<td class="big_label">Racial Traits
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<textarea id="RACIAL_TRAITS" name="RACIAL_TRAITS rows="1" cols="30" disabled="disabled"></textarea></textarea>
+				</td>
+			</tr>
+		</table>
+		
 		<p>
 			<input type="submit" id="submit" value = "Create Character">(currently does nothing)
 		</p>

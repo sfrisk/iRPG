@@ -1,10 +1,6 @@
 <div id = "footer">
+<p>This site is copyright &copy 2009 Sarah Frisk.</p>
 
-<ul>
-	<li>&copy RPGalot</li>
-	<li>About Us</li>
-	<li>Contact Us</li>
-</ul>
 
 </div>
 </body>
