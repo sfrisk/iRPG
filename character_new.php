@@ -167,7 +167,7 @@ include('header.php');
 		<table cellspacing="0" class="conditional">
 		<tr>
 			<td>Conditional AC Modifiers</td>
-			<td class = "right_cell"><textarea name="CONDITIONAL_AC_MOD" rows="2" cols="45" disabled="disabled"></textarea></textarea></td>
+			<td class = "right_cell"><textarea name="CONDITIONAL_AC_MOD" rows="3" cols="45" disabled="disabled"></textarea></textarea></td>
 		</tr>
 		</table>		
 		
