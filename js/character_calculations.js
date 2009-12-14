@@ -2,6 +2,7 @@ window.onload = setup;
 
 var numericExpression = /^[0-9]+$/;
 var formerRace = 'NO_RACE';
+var formerClass = 'NO_CLASS';
 
 function setup(){
 	
@@ -12,9 +13,237 @@ function setup(){
 	document.getElementById('INT').addEventListener("change", setRawINT, false);
 	document.getElementById('WIS').addEventListener("change", setRawWIS, false);
 	document.getElementById('CHA').addEventListener("change", setRawCHA, false);
+	document.getElementById('class').addEventListener("change", setClass, false);
+}
+
+function Adjust(id, amount)
+{
+	document.getElementById(id).value = parseInt(document.getElementById(id).value) + amount;
+}
+
+//Class Stuff
+
+function setClass(){
+	var class = document.getElementById('class').value;
+	unsetClass();
+	if (class == "SORCERER")
+		setSorcerer();
+	if (class == "WIZARD")
+		setWizard();
+	if (class == "BARD")
+		setBard();
+	if (class == "ROGUE")
+		setRogue();
+	if (class == "CLERIC")
+		setCleric();
+	if (class == "DRUID")
+		setDruid();
+	if (class == "MONK")
+		setMonk();
+	if (class == "RANGER")
+		setRanger();
+	if (class == "FIGHTER")
+		setFighter();
+	if (class == "PALADIN")
+		setPaladin();
+	if (class == "BARBARIAN")
+		setBarbarian();
+	formerClass = class;
+}
+function setSorcerer(){
+	setHitPoints(4);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", 0);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", 2);
+}
+function setWizard(){
+	setHitPoints(4);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", 0);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", 2);
+}
+function setBard(){
+	setHitPoints(6);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", 0);
+	Adjust("REFLEX_BASE_SAVE", 2);
+	Adjust("WILL_BASE_SAVE", 2);
+
+}
+function setRogue(){
+	setHitPoints(6);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", 0);
+	Adjust("REFLEX_BASE_SAVE", 2);
+	Adjust("WILL_BASE_SAVE", 0);
+}
+function setCleric(){
+	setHitPoints(8);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", 2);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", 2);
+
+}
+function setDruid(){
+	setHitPoints(8);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", 2);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", 2);
+
+}
+function setMonk(){
+	setHitPoints(8);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", 2);
+	Adjust("REFLEX_BASE_SAVE", 2);
+	Adjust("WILL_BASE_SAVE", 2);
+}
+function setRanger(){
+	setHitPoints(8);
+	Adjust("BASE_ATTACK_BONUS", 1);
+	Adjust("FORT_BASE_SAVE", 2);
+	Adjust("REFLEX_BASE_SAVE", 2);
+	Adjust("WILL_BASE_SAVE", 0);
+}
+function setFighter(){
+	setHitPoints(10);
+	Adjust("BASE_ATTACK_BONUS", 1);
+	Adjust("FORT_BASE_SAVE", 2);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", 0);
+}
+function setPaladin(){
+	setHitPoints(10);
+	Adjust("BASE_ATTACK_BONUS", 1);
+	Adjust("FORT_BASE_SAVE", 2);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", 0);
+}
+function setBarbarian()
+{
+	setHitPoints(12);
+	Adjust("BASE_ATTACK_BONUS", 1);
+	Adjust("FORT_BASE_SAVE", 2);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", 0);
+}
+
+function unsetClass(){
+	if (formerClass == "SORCERER")
+		unsetSorcerer();
+	if (formerClass == "WIZARD")
+		unsetWizard();
+	if (formerClass == "BARD")
+		unsetBard();
+	if (formerClass == "ROGUE")
+		unsetRogue();
+	if (formerClass == "CLERIC")
+		unsetCleric();
+	if (formerClass == "DRUID")
+		unsetDruid();
+	if (formerClass == "MONK")
+		unsetMonk();
+	if (formerClass == "RANGER")
+		unsetRanger();
+	if (formerClass == "FIGHTER")
+		unsetFighter();
+	if (formerClass == "PALADIN")
+		unsetPaladin();
+	if (formerClass == "BARBARIAN")
+		unsetBarbarian();
 }
 
 
+function unsetSorcerer(){
+	setHitPoints(4);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", 0);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", -2);
+}
+function unsetWizard(){
+	setHitPoints(4);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", 0);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", -2);
+}
+function unsetBard(){
+	setHitPoints(6);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", 0);
+	Adjust("REFLEX_BASE_SAVE", -2);
+	Adjust("WILL_BASE_SAVE", -2);
+
+}
+function unsetRogue(){
+	setHitPoints(6);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", 0);
+	Adjust("REFLEX_BASE_SAVE", -2);
+	Adjust("WILL_BASE_SAVE", 0);
+}
+function unsetCleric(){
+	setHitPoints(8);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", -2);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", -2);
+
+}
+function unsetDruid(){
+	setHitPoints(8);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", -2);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", -2);
+
+}
+function unsetMonk(){
+	setHitPoints(8);
+	Adjust("BASE_ATTACK_BONUS", 0);
+	Adjust("FORT_BASE_SAVE", -2);
+	Adjust("REFLEX_BASE_SAVE", -2);
+	Adjust("WILL_BASE_SAVE", -2);
+}
+function unsetRanger(){
+	setHitPoints(8);
+	Adjust("BASE_ATTACK_BONUS", -1);
+	Adjust("FORT_BASE_SAVE", -2);
+	Adjust("REFLEX_BASE_SAVE", -2);
+	Adjust("WILL_BASE_SAVE", 0);
+}
+function unsetFighter(){
+	setHitPoints(10);
+	Adjust("BASE_ATTACK_BONUS", -1);
+	Adjust("FORT_BASE_SAVE", -2);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", 0);
+}
+function unsetPaladin(){
+	setHitPoints(10);
+	Adjust("BASE_ATTACK_BONUS", -1);
+	Adjust("FORT_BASE_SAVE", -2);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", 0);
+}
+function unsetBarbarian()
+{
+	setHitPoints(12);
+	Adjust("BASE_ATTACK_BONUS", -1);
+	Adjust("FORT_BASE_SAVE", -2);
+	Adjust("REFLEX_BASE_SAVE", 0);
+	Adjust("WILL_BASE_SAVE", 0);
+}
+
+
+function setHitPoints(dice){
+	document.getElementById("HIT_POINTS").value = dice + parseInt(document.getElementById("CON_MOD0").value);
+}
 
 //Modifiers
 
@@ -85,6 +314,9 @@ function setMod(id)
 		document.getElementById(id+"_MOD"+i).value = mod;
 		i++;
 	}
+	
+	if (id == "CON")
+		setClass();
 	
 }
 

@@ -146,21 +146,21 @@ include('header.php');
 		</tr>
 			<tr>
 				<td>AC <br /><span class="label">Armor Class</span></td>
-				<td><input type="text" id="total" size="3" / ></td>
+				<td><input type="text" id="total" size="3" value="0" / ></td>
 				<td>&nbsp;= 10 +</td>
-				<td><input disabled="disabled" type="text" id="ARMOR_BONUS" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="ARMOR_BONUS" size="3" value="0" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="SHIELD_BONUS" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="SHIELD_BONUS" size="3" value="0" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="DEX_MOD1" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="DEX_MOD1" size="3" value="0" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="SIZE_MOD0" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="SIZE_MOD0" size="3" value="0" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="NATURAL_ARMOR" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="NATURAL_ARMOR" size="3" value="0" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="DEFLECTION_MOD" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="DEFLECTION_MOD" size="3" value="0" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="MISC_MOD_ARMOR_CLASS" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="MISC_MOD_ARMOR_CLASS" size="3" value="0" / ></td>
 			</tr>
 		</table>
 		
@@ -187,80 +187,80 @@ include('header.php');
 			</tr>
 			<tr>
 				<td>Fortitude<br /><span class="label">(Constitution)</span></td>
-				<td><input disabled="disabled" type="text" id="FORT_TOTAL" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="FORT_TOTAL" value="0" size="3" value="0" /></td>
 				<td> = </td>
-				<td><input disabled="disabled" type="text" id="FORT_BASE_SAVE" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="FORT_BASE_SAVE" value="0" size="3" value="0" /></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="CON_MOD1" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="CON_MOD1" value="0" size="3" value="0" /></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="FORT_MAGIC_MOD" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="FORT_MAGIC_MOD" value="0" size="3" value="0" /></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="FORT_MISC_MOD" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="FORT_MISC_MOD" value="0" size="3" value="0" /></td>
 			</tr>
 			<tr>
 				<td>Reflex<br /><span class="label">(Dexterity)</span></td>
-				<td><input disabled="disabled" type="text" id="REFLEX_TOTAL" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="REFLEX_TOTAL" value="0" size="3" value="0" /></td>
 				<td> = </td>
-				<td><input disabled="disabled" type="text" id="REFLEX_BASE_SAVE" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="REFLEX_BASE_SAVE" value="0" size="3" value="0" /></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="DEX_MOD3" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="DEX_MOD3" value="0" size="3" value="0" /></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="REFLEX_MAGIC_MOD" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="REFLEX_MAGIC_MOD" value="0" size="3" value="0" /></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="REFLEX_MISC_MOD" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="REFLEX_MISC_MOD" value="0" size="3" value="0" /></td>
 			</tr>
 			<tr>
 				<td>Will<br /><span class="label">(Wisdom)</span></td>
-				<td><input disabled="disabled" type="text" id="WILL_TOTAL" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="WILL_TOTAL" value="0" size="3" value="0" /></td>
 				<td> = </td>
-				<td><input disabled="disabled" type="text" id="WILL_BASE_SAVE" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="WILL_BASE_SAVE" value="0" size="3" value="0" /></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="WIS_MOD1" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="WIS_MOD1" value="0" size="3" value="0" /></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="WILL_MAGIC_MOD" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="WILL_MAGIC_MOD" value="0" size="3" value="0" /></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="WILL_MISC_MOD" value="0" size="3" /></td>
+				<td><input disabled="disabled" type="text" id="WILL_MISC_MOD" value="0" size="3" value="0" /></td>
 			</tr>
 		</table>
 		
 		<table cellspacing="0" class="character_table2">
 		<tr>
 			<td>Touch<br /><span class="label">Armor Class</span></td>
-			<td class = "right_cell"><input disabled="disabled" type="text" id="TOUCH" size="3" / ></td>
+			<td class = "right_cell"><input disabled="disabled" type="text" id="TOUCH" size="3" value="0" / ></td>
 		</tr>
 		</table>
 		
 		<table cellspacing="0" class="character_table2">
 		<tr>
 			<td>Flat-Footed<br /><span class="label">Armor Class</span></td>
-			<td class = "right_cell"><input disabled="disabled" type="text" id="FLAT_FOOTED" size="3" / ></td>
+			<td class = "right_cell"><input disabled="disabled" type="text" id="FLAT_FOOTED" size="3" value="0" / ></td>
 		</tr>
 		</table>
 		
 		<table cellspacing="0" class="character_table2">
 		<tr>
 			<td>HP<br /><span class="label">Hit Points</span></td>
-			<td class = "right_cell"><input disabled="disabled" type="text" id="HIT_POINTS" size="3" / ></td>
+			<td class = "right_cell"><input disabled="disabled" type="text" id="HIT_POINTS" size="3" value="0" / ></td>
 		</tr>
 		</table>	
 
 		<table cellspacing="0" class="character_table5">
 		<tr>
 			<td>Speed</td>
-			<td class = "right_cell"><input disabled="disabled" type="text" id="SPEED" size="3" / ></td>
+			<td class = "right_cell"><input disabled="disabled" type="text" id="SPEED" size="3" value="0" / ></td>
 		</tr>
 		</table>
 
 		<table cellspacing="0" class="character_table4">
 		<tr>
 			<td>Base Attack Bonus</td>
-			<td class = "right_cell"><input disabled="disabled" type="text" id="BASE_ATTACK_BONUS" size="3" / ></td>
+			<td class = "right_cell"><input disabled="disabled" type="text" id="BASE_ATTACK_BONUS" size="3" value="0" / ></td>
 		</tr>
 		</table>
 		<table cellspacing="0" class="character_table4">
 		<tr>
 			<td>Spell Resistance</td>
-			<td class = "right_cell"><input disabled="disabled" type="text" id="SPELL_RESISTANCE" size="3" / ></td>
+			<td class = "right_cell"><input disabled="disabled" type="text" id="SPELL_RESISTANCE" size="3" value="0" / ></td>
 		</tr>
 		</table>
 		
@@ -280,15 +280,15 @@ include('header.php');
 		</tr>
 			<tr>
 				<td>Grapple<br /><span class="label">Modifier</span></td>
-				<td><input disabled="disabled" type="text" id="TOTAL_GRAPPLE" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="TOTAL_GRAPPLE" size="3" value="0" / ></td>
 				<td> = </td>
-				<td><input disabled="disabled" type="text" id="BASE_ATTACK_BONUS" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="BASE_ATTACK_BONUS" size="3" value="0" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="STR_MOD1" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="STR_MOD1" size="3" value="0" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="SIZE_MOD1" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="SIZE_MOD1" size="3" value="0" / ></td>
 				<td> + </td>
-				<td><input disabled="disabled" type="text" id="MISC_MOD_GRAPPLE" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="MISC_MOD_GRAPPLE" size="3" value="0" / ></td>
 			</tr>
 		</table>
 
@@ -303,11 +303,11 @@ include('header.php');
 			<tr>
 			<tr>
 				<td><br />Initiative<br /><span class="label">Modifier</span></td>
-				<td><input disabled="disabled" type="text" id="TOTAL_INITIATIVE" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="TOTAL_INITIATIVE" size="3" value="0" / ></td>
 				<td>&nbsp;=&nbsp;</td>
-				<td><input disabled="disabled" type="text" id="DEX_MOD2" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="DEX_MOD2" size="3" value="0" / ></td>
 				<td>&nbsp;+&nbsp;</td>
-				<td><input disabled="disabled" type="text" id="MISC_MOD" size="3" / ></td>
+				<td><input disabled="disabled" type="text" id="MISC_MOD" size="3" value="0" / ></td>
 			</tr>
 			</table>
 		
