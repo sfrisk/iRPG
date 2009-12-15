@@ -22,16 +22,16 @@ include('header.php');
 
 		<p>	
 			<? if(!empty($user->name)){?>
-			<span class="bold">Name:</span> <?= $user->name ?>
+			<strong>Name:</strong> <?= $user->name ?>
 			<br />
 			<?} if(!empty($user->location)){?>
-			<span class="bold">Location:</span> <?= $user->location;?>
+			<strong>Location:</strong> <?= $user->location;?>
 			<br />
 			<?} if(!empty($user->gender)){?>
-			<span class="bold">Gender:</span> <?=$user->gender;?>
+			<strong>Gender:</strong> <?=$user->gender;?>
 			<br />
 			<?}?>
-			<span class="bold">E-mail:</span> <?=$user->email; ?>
+			<strong>E-mail:</strong> <?=$user->email; ?>
 			
 		</p>
 	

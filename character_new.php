@@ -21,7 +21,7 @@ include('header.php');
 	New Character
 </h1>
 
-<form action="submit_character.php" method="post">
+<form action="" method="post">
 		<p>
 			<label for="name">Name:</label>
 			<input type="text" id="name" / >

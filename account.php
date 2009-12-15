@@ -32,18 +32,18 @@ if(empty($user->password))
 		?>
 		
 		<div id="right_content">
-		<h2>Account</h2>
+
 		From here you can change your basic account info.
 		<p></p>
 		<p>
 		<img src ="<?= Gravatar::creat($user->email) ?>" />
 		<br /> Change your avatar at <a href="http://www.gravatar.com">gravatar.com</a>
 		<br />
-		We are using <span class="italic"><?=$user->email;?></span>
+		We are using <em><?=$user->email;?></em>
 		</p>
 		</div>
 		<div id="left_content">
-		<h1><?= $user->username ?></h1>
+	
 		<form action="account.php" method="post">
 		<p>
 		<label for="username">Username</label>

@@ -22,19 +22,19 @@
 		<body>
 		<div id="header">
 		
-		<img src="images/logo.png" alt="rpgalot" \>
+		<img src="images/logo-text2.png" alt="rpgalot" \>
 		
 		<ul id="toplinks">
-		<li><a href="contact.php">Contact</a></li>
-		<li><a href="about.php">About</a></li>
+		<li><a href="contact.php" class="<?= preg_match('/contact\.php/', $_SERVER["REQUEST_URI"]) ? '' : 'not' ?>selected">Contact</a></li>
+		<li><a href="about.php"   class="<?= preg_match('/about\.php/', $_SERVER["REQUEST_URI"]) ? '' : 'not' ?>selected">About</a></li>
 		<?php if(!empty($_SESSION['user'])){ ?>
-			<li><a href="home.php">Profile</a></li>
-			<li><a href="characters.php">Character</a></li>
-			<li><a href="account.php">Settings</li>
-			<li><a href="logout.php">Logout<a></li>
+			<li><a href="home.php"       class="<?= preg_match('/home\.php/', $_SERVER["REQUEST_URI"]) ? '' : 'not' ?>selected" >Profile</a></li>
+			<li><a href="characters.php" class="<?= preg_match('/characters\.php/', $_SERVER["REQUEST_URI"]) ? '' : 'not' ?>selected" >Character</a></li>
+			<li><a href="account.php"    class="<?= preg_match('/account\.php/', $_SERVER["REQUEST_URI"]) ? '' : 'not' ?>selected" >Settings</a></li>
+			<li><a href="logout.php" class="notselected">Logout</a></li>
 		<? } else{ ?>
-		<li><a href="index.php">Login</a></li>
-		<li><a href="signup.php">Signup</a></li>
+		<li><a href="index.php"  class="<?= preg_match('/index\.php/', $_SERVER["REQUEST_URI"]) ? '' : 'not' ?>selected">Login</a></li>
+		<li><a href="signup.php" class="<?= preg_match('/signup\.php/', $_SERVER["REQUEST_URI"]) ? '' : 'not' ?>selected">Signup</a></li>
 		<?	}	?>
 		</ul>
 		</div>

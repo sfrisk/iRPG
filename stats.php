@@ -40,7 +40,7 @@ include('header.php');
 		</p>
 		</div>
 		<div id="left_content">
-		<h1><?= $user->username ?></h1>
+
 		<form action="stats.php" method="post">
 		<p>
 			<label for="name">Name</label>
