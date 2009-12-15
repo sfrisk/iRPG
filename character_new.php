@@ -15,8 +15,6 @@ if(empty($user->password))
 include('header.php');
 ?>
 
-<div class="content">
-
 <img id="avatar" src="images/avatars/generic.png" alt="generic" width="100px" />
 
 <h1>
@@ -28,11 +26,8 @@ include('header.php');
 			<label for="name">Name:</label>
 			<input type="text" id="name" / >
 			
-			<label for="level">Level:</label>
-			<select id="level">
-			<option value="1" selected="selected">1</option>
+			<span class="bold">Level:</span> 1	
 			<!-- Will put more options in at later date, for now only dealing with level 1 characters-->
-			</select>
 			
 			<label for="class">Class:</label>
 			<select id="class">
@@ -423,6 +418,6 @@ include('header.php');
 		
 	
 </form>
-</div>
+
 
 <? include('footer.php'); ?>

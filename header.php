@@ -25,9 +25,8 @@
 		<img src="images/logo.png" alt="rpgalot" \>
 		
 		<ul id="toplinks">
-		<li>Features</li>
-		<li>Contact</li>
-		<li>About</li>
+		<li><a href="contact.php">Contact</a></li>
+		<li><a href="about.php">About</a></li>
 		<?php if(!empty($_SESSION['user'])){ ?>
 			<li><a href="home.php">Profile</a></li>
 			<li><a href="character_new.php">Character</a></li>
@@ -40,3 +39,4 @@
 		</ul>
 		</div>
 		</div>
+		<div class="content">

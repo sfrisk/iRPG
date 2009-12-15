@@ -35,6 +35,7 @@ include('header.php');
 
 	<div class = "login">
 	<div id="sign">
+	<h1>Login</h1>
 	<form action="index.php" method="post">
 			<p>
 				<label for="username">Username</label>

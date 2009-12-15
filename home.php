@@ -15,7 +15,6 @@ if(empty($user->password))
 include('header.php');
 
 ?>
-		<div class="content">
 		<h1>
 			<img src ="<?= Gravatar::creat($user->email) ?>" />
 			<?= $user->username ?>
@@ -28,9 +27,6 @@ include('header.php');
 			<?} if(!empty($user->location)){?>
 			<span class="bold">Location:</span> <?= $user->location;?>
 			<br />
-			<?} if(!empty($user->birthday)){?>
-			<span class="bold">Birthday:</span> $user->birthday;?>
-			<br />
 			<?} if(!empty($user->gender)){?>
 			<span class="bold">Gender:</span> <?=$user->gender;?>
 			<br />
@@ -39,6 +35,4 @@ include('header.php');
 			
 		</p>
 	
-
-		</div>
 <? include('footer.php'); ?>

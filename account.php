@@ -27,10 +27,8 @@ if(empty($user->password))
 	}
 
 ?>
-		<div class="content">
 		
 		<? include('settings.php'); 
-	
 		?>
 		
 		<div id="right_content">
@@ -72,7 +70,6 @@ if(empty($user->password))
 		<input type="submit" name="submit" value = "Save" > 
 		</p>
 		</form>
-		</div>
 		</div>
 
 

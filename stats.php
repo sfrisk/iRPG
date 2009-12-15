@@ -31,8 +31,6 @@ include('header.php');
 
 
 ?>
-		<div class="content">
-		
 		<? include('settings.php'); ?>
 	
 		<div id="right_content">
@@ -58,33 +56,6 @@ include('header.php');
 			</select>
 		</p>
 		<p>
-			<label for="birthday_month">Birthday:</label>
-			<select name="birthday_month">
-				<option value="january">January</option>
-				<option value="february">February</option>
-				<option value="march">March</option>
-				<option value="april">April</option>
-				<option value="may">May</option>
-				<option value="june">June</option>
-				<option value="july">July</option>
-				<option value="august">August</option>
-				<option value="september">September</option>
-				<option value="october">October</option>
-				<option value="november">November</option>
-				<option value="december">December</option>
-			</select>
-			<select name="birthday_day">
-			<?for ($i = 1; $i < 32; $i++){
-				?><option value="<?=$i?>"><?=$i?></option>
-			<?}?>
-			</select>
-			<select name="birthday_year">
-			<?for ($i = 1900; $i <= date("Y"); $i++){
-				?><option value="<?=$i?>"><?=$i?></option>
-			<?}?>
-			</select>
-		</p>
-		<p>
 			<label for="location">Location</label>
 			<input type="text" name="location" value="<?=$user->location;?>" / >
 		</p>
@@ -96,7 +67,6 @@ include('header.php');
 		<input type="submit" name="submit" value = "Save" > 
 		</p>
 		</form>
-		</div>
 		</div>
 
 

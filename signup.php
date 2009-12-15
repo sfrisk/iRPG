@@ -28,6 +28,7 @@ include('header.php');
 ?>
 		<div class="login">
 		<div id="sign">
+		<h1>Sign Up!</h1>
 	<form action="signup.php" method="post">
 			<p>
 				<label for="username">Username</label>
