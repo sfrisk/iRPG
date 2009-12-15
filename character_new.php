@@ -21,7 +21,7 @@ include('header.php');
 	New Character
 </h1>
 
-<form action="" method="post">
+<form action="submit_character.php" method="post">
 		<p>
 			<label for="name">Name:</label>
 			<input type="text" id="name" / >
@@ -97,13 +97,6 @@ include('header.php');
 				<option value="WEE_JAS">Wee Jas</option>
 				<option value="YONDALLA">Yondalla</option>
 				<option value="OTHER">Other</option>
-			</select>
-
-			<label for"size">Size</label>
-			<select id="size">
-				<option value="NO_SIZE" id="NO_SIZE"></option>
-				<option value="SMALL" id="SMALL">Small</option>
-				<option value="MEDIUM" id="MEDIUM">Medium</option>
 			</select>
 
 			<label for="age">Age:</label>
@@ -412,7 +405,7 @@ include('header.php');
 		</table>
 		
 		<p>
-			<input type="submit" id="submit" value = "Create Character">(currently does nothing)
+			<input type="submit" id="submit" value = "Create Character">
 		</p>
 
 		

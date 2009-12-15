@@ -122,3 +122,7 @@ label{
 #avatar{
 	float: right;
 }
+
+#characters{
+	text-align: center;
+}
