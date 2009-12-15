@@ -4,13 +4,19 @@ Future implementations include user to user interaction where users can link cha
 
 Site Architecture: 
 
+/images
+	Images.  Clearly.  Hopefully this will later have folders for user and character avatars.
 /includes
 	This is where I've placed on my php functions
-/images
-	Images.  Clearly
+/js
+	This is the javascript functions, mostly for character stuff
 /tests
 	This is where I placed my initial tests of the functions
 /mockups
 	early design sketches
+/style
+	these are stylesheets for the project
+/tests
+	these are early tests for custom functions, no longer needed, but there for quick reference
 /text
 	this is text for various sections of the site that will later be parsed into various parts of the website.
