@@ -34,7 +34,7 @@
 		if (preg_match('/settings/', $_SERVER["REQUEST_URI"]))
 		{
 		?>
-			<img src="../images/logo-text2.png" alt="rpgalot" \>
+			<img id="header_image" src="../images/logo-text2.png" alt="rpgalot" \>
 			<ul id="toplinks">
 				<li><a href="../contact.php" class="<?= preg_match('/contact\.php/', $_SERVER["REQUEST_URI"]) ? '' : 'not' ?>selected">Contact</a></li>
 				<li><a href="../about.php"   class="<?= preg_match('/about\.php/', $_SERVER["REQUEST_URI"]) ? '' : 'not' ?>selected">About</a></li>

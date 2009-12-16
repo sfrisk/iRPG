@@ -19,6 +19,7 @@ class user{
 	var $gender; //MAKE A CONSTANT FOR THIS
 	var $birthday; //string? 09-01-1987
 	var $location; //string
+	var $avatar; //string location of avatar
 	
 	var $characters; // array of characters?
 	
@@ -38,6 +39,7 @@ class user{
 			$this->name = $row["user_name"];
 			$this->gender = $row["user_gender"];
 			$this->location = $row["user_location"];
+			$this->avatar = $row["user_avatar"];
 		}		
 	}
 	
@@ -54,7 +56,7 @@ class user{
 				$password_salt = md5(uniqid(rand(), true)); //creates a salt for password
 				$salted_password = md5($password . $password_salt . 'magicalworld'); //make sure if anyone gets the password, it makes no sense
 				
-				$sql = "INSERT INTO rpg_users (username, user_password, salt, user_email) values ('" . $username . "', '" . $salted_password . "', '" . $password_salt . "', '" . $user_email . "')";
+				$sql = "INSERT INTO rpg_users (username, user_password, salt, user_email, user_avatar) values ('" . $username . "', '" . $salted_password . "', '" . $password_salt . "', '" . $user_email . "', 'images/avatars/generic.png)";
 				if($db->query($sql))
 					return true;
 				else
@@ -69,6 +71,14 @@ class user{
 			echo "You did not fill out all the forms";
 			return false;
 		}	
+	}
+	
+	function set_Avatar($newAvatar)
+	{
+		///DO SOMETHING HERE
+		global $db;
+		$this->avatar = $newAvatar;
+		return $db->update("rpg_users", "user_avatar", $newAvatar, $this->user_id);
 	}
 	
 	function setAccount($username, $email, $passwords)

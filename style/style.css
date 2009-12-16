@@ -74,6 +74,11 @@ label{
 	margin: 0 auto;
 }
 
+#header_image
+{
+	max-width: 350px;
+}
+
 #toplinks{
 	float:right;
 }
@@ -224,6 +229,7 @@ label{
 #left_content{
 	width: 480px;
 	padding-top: 20px;
+	min-height: 300px;
 }
 
 #avatar{
