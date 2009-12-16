@@ -56,11 +56,11 @@ class user{
 				$password_salt = md5(uniqid(rand(), true)); //creates a salt for password
 				$salted_password = md5($password . $password_salt . 'magicalworld'); //make sure if anyone gets the password, it makes no sense
 				
-				$sql = "INSERT INTO rpg_users (username, user_password, salt, user_email, user_avatar) values ('" . $username . "', '" . $salted_password . "', '" . $password_salt . "', '" . $user_email . "', 'images/avatars/generic.png)";
+				$sql = "INSERT INTO rpg_users (username, user_password, salt, user_email, user_avatar) values ('" . $username . "', '" . $salted_password . "', '" . $password_salt . "', '" . $user_email . "', 'images/avatars/generic.png')";
 				if($db->query($sql))
-					return true;
+					echo "worked, please login";
 				else
-					return false;
+					echo "fail";
 			}
 			else{
 				echo "The username already exists";

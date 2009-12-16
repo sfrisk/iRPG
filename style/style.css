@@ -79,6 +79,12 @@ label{
 	max-width: 350px;
 }
 
+#logo a
+{
+	border: 0;
+	text-decoration: none;
+}
+
 #toplinks{
 	float:right;
 }
@@ -220,6 +226,24 @@ label{
 	background-color: white;
 	border: 1px solid black;
 }
+
+#next
+{
+		padding: 3px 15px 3px 15px;
+		text-decoration: none;
+		color: #666;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		background-color: rgba(152,244,127,1.0);
+		border: 1px solid rgba(0,0,0,0.1);
+		-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+		-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+		box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+		text-shadow: 1px 1px 1px rgba(255,255,255,1.0);
+		float:right;
+}
+
 
 #right_content{
 	width: 300px;
