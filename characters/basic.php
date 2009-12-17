@@ -115,8 +115,8 @@ include('character_navigation.php');
 			<input type="text" name="name" / >
 		</p>
 		<p>
-			<label for="race">Class:</label>
-			<select name="class">
+			<label for="class">Class:</label>
+			<select name="class" id="class">
 				<option value="BARBARIAN" id="BARBARIAN">Barbarian</option>
 				<option value="BARD" id="BARD">Bard</option>
 				<option value="CLERIC" id="CLERIC">Cleric</option>
@@ -148,8 +148,13 @@ include('character_navigation.php');
 			</select>
 
 			<label for="age">Age:</label>
-			<input type="text" name="age" size="3"/ >
+			<input type="text" name="age" id="age" value = "16" size="3"/ >
 			
+		</p>
+		<p>
+			<label for="gender">Gender:</label>
+			<input type="radio" name="gender" value="MALE" selected="selected" /> Male
+			<input type="radio" name="gender" value="FEMALE" /> Female
 		</p>
 		<p>
 		<label for="alignment">Alignment:</label>
