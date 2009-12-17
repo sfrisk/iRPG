@@ -159,15 +159,15 @@ include('character_navigation.php');
 		<p>
 		<label for="alignment">Alignment:</label>
 		<select id="alignment">
-			<option value="LAWFUL GOOD">Lawful Good</option>
-			<option value="NEUTRAL GOOD">Neutral Good</option>
-			<option value="CHAOTIC GOOD">Chaotic Good</option>
-			<option value="LAWFUL NEUTRAL">Lawful Neutral</option>
-			<option value="NEUTRAL">Neutral</option>
-			<option value="CHAOTIC NEUTRAL">Chaotic Neutral</option>
-			<option value="LAWFUL EVIL">Lawful Evil</option>
-			<option value="NEUTRAL EVIL">Neutral Evil</option>
-			<option value="CHAOTIC EVIL">Chaotic Evil</option>
+			<option id="LAWFUL_GOOD" value="LAWFUL GOOD" disabled="disabled">Lawful Good</option>
+			<option id="NEUTRAL_GOOD" value="NEUTRAL GOOD" selected="selected">Neutral Good</option>
+			<option id="CHAOTIC_GOOD" value="CHAOTIC GOOD">Chaotic Good</option>
+			<option id="LAWFUL_NEUTRAL" value="LAWFUL NEUTRAL" disabled="disabled">Lawful Neutral</option>
+			<option id="NEUTRAL" value="NEUTRAL">Neutral</option>
+			<option id="CHAOTIC_NEUTRAL" value="CHAOTIC NEUTRAL">Chaotic Neutral</option>
+			<option id="LAWFUL_EVIL" value="LAWFUL EVIL" disabled="disabled">Lawful Evil</option>
+			<option id="NEUTRAL_EVIL" value="NEUTRAL EVIL">Neutral Evil</option>
+			<option id="CHAOTIC_EVIL" value="CHAOTIC EVIL">Chaotic Evil</option>
 		</select>
 		</p>
 		<p>

@@ -388,12 +388,132 @@ function unsetHalfling(){
 // also adjusts HP, 
 function setClass()
 {
-	currentClass = document.getElementById("class").value;
+	var class = document.getElementById('class').value;
+	unsetClass();
+	if (class == "BARD")
+		setBard();
+	if (class == "MONK")
+		setMonk();
+	if (class == "PALADIN")
+		setPaladin();
+	if (class == "BARBARIAN")
+		setBarbarian();
+	currentClass = class;
 	setMinAgeClass();
 	setAge();
 }
 
+function unsetClass()
+{
+	if (currentClass == "BARD")
+		unsetBard();
+	if (currentClass == "MONK")
+		unsetMonk();
+	if (currentClass == "PALADIN")
+		unsetPaladin();
+	if (currentClass == "BARBARIAN")
+		unsetBarbarian();	
+}
 
+function setBard()
+{
+	document.getElementById("LAWFUL_GOOD").disabled = true;
+	document.getElementById("LAWFUL_GOOD").selected = false;
+	document.getElementById("LAWFUL_NEUTRAL").disabled = true;
+	document.getElementById("LAWFUL_NEUTRAL").selected = false;
+	document.getElementById("LAWFUL_EVIL").disabled = true;
+	document.getElementById("LAWFUL_EVIL").selected = false;
+}
+
+function setMonk()
+{
+	document.getElementById("NEUTRAL_GOOD").disabled = true;
+	document.getElementById("NEUTRAL_GOOD").selected = false;
+	document.getElementById("NEUTRAL").disabled = true;
+	document.getElementById("NEUTRAL").selected = false;
+	document.getElementById("NEUTRAL_EVIL").disabled = true;
+	document.getElementById("NEUTRAL_EVIL").selected = false;
+	
+	document.getElementById("CHAOTIC_GOOD").disabled = true;
+	document.getElementById("CHAOTIC_GOOD").selected = false;
+	document.getElementById("CHAOTIC_NEUTRAL").disabled = true;
+	document.getElementById("CHAOTIC_NEUTRAL").selected = false;
+	document.getElementById("CHAOTIC_EVIL").disabled = true;
+	document.getElementById("CHAOTIC_EVIL").selected = false;		
+}
+
+function setPaladin()
+{
+	document.getElementById("NEUTRAL_GOOD").disabled = true;
+	document.getElementById("NEUTRAL_GOOD").selected = false;
+	document.getElementById("NEUTRAL").disabled = true;
+	document.getElementById("NEUTRAL").selected = false;
+	document.getElementById("NEUTRAL_EVIL").disabled = true;
+	document.getElementById("NEUTRAL_EVIL").selected = false;
+	
+	document.getElementById("CHAOTIC_GOOD").disabled = true;
+	document.getElementById("CHAOTIC_GOOD").selected = false;
+	document.getElementById("CHAOTIC_NEUTRAL").disabled = true;
+	document.getElementById("CHAOTIC_NEUTRAL").selected = false;
+	document.getElementById("CHAOTIC_EVIL").disabled = true;
+	document.getElementById("CHAOTIC_EVIL").selected = false;	
+	
+	document.getElementById("LAWFUL_NEUTRAL").disabled = true;
+	document.getElementById("LAWFUL_NEUTRAL").selected = false;
+	document.getElementById("LAWFUL_EVIL").disabled = true;
+	document.getElementById("LAWFUL_EVIL").selected = false;
+}
+
+function setBarbarian()
+{
+	document.getElementById("LAWFUL_GOOD").disabled = true;
+	document.getElementById("LAWFUL_GOOD").selected = false;
+	document.getElementById("LAWFUL_NEUTRAL").disabled = true;
+	document.getElementById("LAWFUL_NEUTRAL").selected = false;
+	document.getElementById("LAWFUL_EVIL").disabled = true;
+	document.getElementById("LAWFUL_EVIL").selected = false;
+}
+
+function unsetBard()
+{
+	document.getElementById("LAWFUL_GOOD").disabled = false;
+	document.getElementById("LAWFUL_NEUTRAL").disabled = false;
+	document.getElementById("LAWFUL_EVIL").disabled = false;
+}
+
+function unsetMonk()
+{
+	document.getElementById("NEUTRAL_GOOD").disabled = false;
+	document.getElementById("NEUTRAL").disabled = false;
+	document.getElementById("NEUTRAL_EVIL").disabled = false;
+
+	
+	document.getElementById("CHAOTIC_GOOD").disabled = false;
+	document.getElementById("CHAOTIC_NEUTRAL").disabled = false;
+	document.getElementById("CHAOTIC_EVIL").disabled = false;	
+}
+
+function unsetPaladin()
+{
+	document.getElementById("NEUTRAL_GOOD").disabled = false;
+	document.getElementById("NEUTRAL").disabled = false;
+	document.getElementById("NEUTRAL_EVIL").disabled = false;
+	
+	document.getElementById("CHAOTIC_GOOD").disabled = false;
+	document.getElementById("CHAOTIC_NEUTRAL").disabled = false;
+	document.getElementById("CHAOTIC_EVIL").disabled = false;
+	
+	document.getElementById("LAWFUL_NEUTRAL").disabled = false;
+	document.getElementById("LAWFUL_EVIL").disabled = false;
+
+}
+
+function unsetBarbarian()
+{
+	document.getElementById("LAWFUL_GOOD").disabled = false;
+	document.getElementById("LAWFUL_NEUTRAL").disabled = false;
+	document.getElementById("LAWFUL_EVIL").disabled = false;
+}
 
 //Ability adjustments
 
