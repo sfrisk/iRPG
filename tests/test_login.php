@@ -3,6 +3,11 @@
 foreach(glob('../includes/*.php') as $class_filename) {
      require_once($class_filename);
 }
+// File: test_login.php
+// Name: Sarah Frisk
+// Class: CS 297, Fall 2009
+// Project 10
+// Due date: December 16
 ?>
 
 <!--

@@ -1,6 +1,9 @@
 <?php
-	// © 2009 rpgalot
-	// Programed by Sarah, who is totally awesome
+// File: character_navigation.php
+// Name: Sarah Frisk
+// Class: CS 297, Fall 2009
+// Project 10
+// Due date: December 16
 
 
 ?>

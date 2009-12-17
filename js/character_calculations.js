@@ -1,8 +1,14 @@
+// File: character_calculations.js
+// Name: Sarah Frisk
+// Class: CS 297, Fall 2009
+// Project 10
+// Due date: December 16
+
 window.onload = setup;
 
 var numericExpression = /^[0-9]+$/;
-var formerRace = 'NO_RACE';
-var formerClass = 'NO_CLASS';
+var formerRace = 'BARBARIAN';
+var formerClass = 'HUMAN';
 
 function setup(){
 	

@@ -22,7 +22,6 @@ label{
 .content{
 	width: 825px;
 	margin: 0 auto;
-	background: white;
 	border: 5px black solid;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -57,6 +56,48 @@ label{
 	color: b8b8b8;
 	margin-top: 1px;
 }
+
+.character_label{
+	font-size: 8px;
+	text-align: center;
+}
+
+#abilities{
+	margin: 0 20px;
+	border: 5px black solid;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: rgba(100,100,100,0.1);
+	border: 1px solid rgba(100,100,100,0.5);
+	-moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.8);
+	-webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.8);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+	text-shadow: 1px 1px 1px rgba(255,255,255,1.0);
+	line-height: 10px;
+	max-width: 50%;	
+	float: right;
+	height: 225px;
+}
+
+#stats{
+	margin: 0 0;
+	border: 5px black solid;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: rgba(100,100,100,0.1);
+	border: 1px solid rgba(100,100,100,0.5);
+	-moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.8);
+	-webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.8);
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+	text-shadow: 1px 1px 1px rgba(255,255,255,1.0);
+	max-width: 250px;
+	height: 225px;
+}
+
 
 #sign{
 	width: 300px;
@@ -227,15 +268,16 @@ label{
 	border: 1px solid black;
 }
 
-#next
+#next a
 {
+		margin: 10px 20px;
 		padding: 3px 15px 3px 15px;
 		text-decoration: none;
 		color: #666;
 		-moz-border-radius: 10px;
 		-webkit-border-radius: 10px;
 		border-radius: 10px;
-		background-color: rgba(152,244,127,1.0);
+		background-color: rgba(152,244,127,0.8);
 		border: 1px solid rgba(0,0,0,0.1);
 		-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 		-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
@@ -244,14 +286,29 @@ label{
 		float:right;
 }
 
+#next a:hover
+{
+	background-color: rgba(152,244,127,0.8);
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+#next a:active {
+	margin-top: 2px;
+}
+
+#next a:focus {
+	color: green;
+	outline:none;
+}
 
 #right_content{
-	width: 300px;
+	width: 250px;
 	float: right;
 }
 
 #left_content{
-	width: 480px;
+	width: 570px;
 	padding-top: 20px;
 	min-height: 300px;
 }
@@ -262,4 +319,8 @@ label{
 
 #characters{
 	text-align: center;
+}
+
+.label{
+	font-size: 8px;
 }

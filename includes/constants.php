@@ -1,6 +1,11 @@
 <?php
+// File: constants.php
+// Name: Sarah Frisk
+// Class: CS 297, Fall 2009
+// Project 10
+// Due date: December 16
 
-//various constants for constanty things
+//various constants for constanty things, not sure how much is to be used
 
 define('NO_GENDER', 0);
 define('FEMALE', 1);
