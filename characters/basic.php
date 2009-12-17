@@ -15,7 +15,7 @@ $user = new user($_SESSION['user']);
 
 if(empty($user->password))
 {
-	header('Location: index.php');
+	header('Location: ../index.php');
 }
 
 include('../header.php');
@@ -36,6 +36,7 @@ include('character_navigation.php');
 		<div id="left_content">
 		
 		<div id = "abilities">
+			<form action="submit_character.php" method="post">
 		<table cellspacing="1">
 			<tr class = "character_label">
 				<td></td>
@@ -109,7 +110,6 @@ include('character_navigation.php');
 		
 		
 		<div id="stats">
-		<form action="stats.php" method="post">
 		<p>
 			<label for="name">Name</label>
 			<input type="text" name="name" / >
@@ -117,7 +117,7 @@ include('character_navigation.php');
 		<p>
 			<label for="class">Class:</label>
 			<select name="class" id="class">
-				<option value="BARBARIAN" id="BARBARIAN">Barbarian</option>
+				<option value="BARBARIAN" id="BARBARIAN" selected="selected">Barbarian</option>
 				<option value="BARD" id="BARD">Bard</option>
 				<option value="CLERIC" id="CLERIC">Cleric</option>
 				<option value="DRUID" id="DRUID">Druid</option>
@@ -137,14 +137,14 @@ include('character_navigation.php');
 		</p>
 		<p>
 			<label for="race">Race:</label>
-			<select id="race">
-				<option value="HUMAN">Human</option>
-				<option value="DWARF">Dwarf</option>
-				<option value="ELF">Elf</option>
-				<option value="GNOME">Gnome</option>
-				<option value="HALF-ELF">Half-Elf</option>
-				<option value="HALF-ORC">Half-Orc</option>
-				<option value="HALFLING">Halfling</option>
+			<select name="race" id="race">
+				<option value="HUMAN" id="HUMAN" selected="selected">Human</option>
+				<option value="DWARF" id="DWARF">Dwarf</option>
+				<option value="ELF" id="ELF">Elf</option>
+				<option value="GNOME" id="GNOME">Gnome</option>
+				<option value="HALF-ELF" id="HALF-ELF">Half-Elf</option>
+				<option value="HALF-ORC" id="HALF-ORC">Half-Orc</option>
+				<option value="HALFLING" id="HALFLING">Halfling</option>
 			</select>
 
 			<label for="age">Age:</label>
@@ -153,12 +153,12 @@ include('character_navigation.php');
 		</p>
 		<p>
 			<label for="gender">Gender:</label>
-			<input type="radio" name="gender" value="MALE" selected="selected" /> Male
+			<input type="radio" name="gender" value="MALE" checked="checked" /> Male
 			<input type="radio" name="gender" value="FEMALE" /> Female
 		</p>
 		<p>
 		<label for="alignment">Alignment:</label>
-		<select id="alignment">
+		<select name = "alignment" id="alignment">
 			<option id="LAWFUL_GOOD" value="LAWFUL GOOD" disabled="disabled">Lawful Good</option>
 			<option id="NEUTRAL_GOOD" value="NEUTRAL GOOD" selected="selected">Neutral Good</option>
 			<option id="CHAOTIC_GOOD" value="CHAOTIC GOOD">Chaotic Good</option>
@@ -172,8 +172,8 @@ include('character_navigation.php');
 		</p>
 		<p>
 		<label for="diety">Diety:</label>
-		<select id="diety">
-			<option value="NO_DIETY">None</option>
+		<select id="diety" name="diety">
+			<option value="NO_DIETY" selected="selected">None</option>
 			<option value="BOCCOB">Boccob</option>
 			<option value="CORELLON_LARETHIAN">Corellon Larethian</option>
 			<option value="EHLONNA">Ehlonna</option>
@@ -198,13 +198,11 @@ include('character_navigation.php');
 		</p>
 		</div>
 		
-
-		<p id="next">
-			<a href="skills.php">Save and Continue</a>
-		</p>
-
 		<p>
-		</p>	
+		<button id="next">
+			<span>Save and Continue</span>
+		</button> 
+		</p>
 
 		</form>
 

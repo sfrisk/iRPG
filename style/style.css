@@ -269,11 +269,12 @@ label{
 	border: 1px solid black;
 }
 
-#next a
+#next
 {
 		margin: 10px 20px;
 		padding: 3px 15px 3px 15px;
 		text-decoration: none;
+		font-size: 12pt;
 		color: #666;
 		-moz-border-radius: 10px;
 		-webkit-border-radius: 10px;
@@ -287,18 +288,18 @@ label{
 		float:right;
 }
 
-#next a:hover
+#next :hover
 {
 	background-color: rgba(152,244,127,0.8);
 	-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
 	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
 }
 
-#next a:active {
+#next :active {
 	margin-top: 2px;
 }
 
-#next a:focus {
+#next :focus {
 	color: green;
 	outline:none;
 }
