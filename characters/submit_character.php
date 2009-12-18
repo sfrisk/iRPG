@@ -24,5 +24,7 @@ $char = new character();
 	$character["gender"] = $_REQUEST['gender'];
 	
 	$char->add_Character($character);
+	
+	$_SESSION['char'] = $char->character_id;
 
 ?>

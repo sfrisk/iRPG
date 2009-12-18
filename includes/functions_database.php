@@ -59,6 +59,15 @@ class database
 		return mysql_fetch_array($result);
 	}
 
+	function getLastId($link="")
+	{
+		if(empty($link))
+		{
+			$link = $this->link;
+		}
+		return mysql_insert_id($link);		
+	}
+
 	function __destruct()
 	{
 		@mysql_close($this->link);

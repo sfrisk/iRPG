@@ -52,13 +52,9 @@ class character{
 			character_age, character_gender) VALUES ($this->user_id, '$this->name', 
 			'$this->level', '$this->class', '$this->race', '$this->alignment', 
 			'$this->diety', $this->age, '$this->gender');";
-		if($db->query($sql))
-			echo "worked";
-		else
-			echo "fail";
-		$sql = "SELECT character_id WHERE character_name = '$this->name' WHERE user_id = $this->user_id";
-		$results = $db->query($sql);
-		echo $results;
+		$db->query($sql);
+		$this->character_id = $db->getLastId();
+
 	}
 	
 }
