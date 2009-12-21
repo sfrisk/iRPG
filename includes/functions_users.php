@@ -29,7 +29,7 @@ class user{
 	{
 		global $db;
 		$sql = "SELECT * from rpg_users where username = '" . $username . "'";
-		$result = $db->query($sql);
+		$results = $db->query($sql);
 		
 		while($row = $db->fetch($results))
 		{

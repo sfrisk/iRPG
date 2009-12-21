@@ -26,5 +26,7 @@ $char = new character();
 	$char->add_Character($character);
 	
 	$_SESSION['char'] = $char->character_id;
+	
+	header('Location: characters.php');
 
 ?>

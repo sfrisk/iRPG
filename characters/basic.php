@@ -200,7 +200,7 @@ include('character_navigation.php');
 		
 		<p>
 		<button id="next">
-			<span>Save and Continue</span>
+			<span>Save Character</span>
 		</button> 
 		</p>
 

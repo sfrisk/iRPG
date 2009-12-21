@@ -30,6 +30,12 @@
 	{?>
 		<script type="text/javascript" src="../js/basic_character.js"></script>
 	<?}?>
+	
+	<?
+		if (preg_match('/characters\.php/', $_SERVER["REQUEST_URI"]))
+	{?>
+		<script type="text/javascript" src="../js/character_ajax.js"></script>
+	<?}?>
 		<head>
 
 			<title>rpgalot</title>

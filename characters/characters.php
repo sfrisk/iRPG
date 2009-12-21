@@ -22,6 +22,11 @@ include('../header.php');
 
 <p id="characters"><img src="../images/characters.png" alt="Characters" /></p>
 
-<p><a href="character_new.php">Create a New Character</a></p>
+<p id="new"><a href="basic.php">Create a New Character</a></p>
+
+<p>Below is a list of your current characters:</p>
+<div id="characterblock">
+	<!-- this is where the character table will go -->
+</div>
 
 <? include('../footer.php'); ?>

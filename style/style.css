@@ -304,6 +304,47 @@ label{
 	outline:none;
 }
 
+#new
+{
+	text-align: center;
+}
+
+#new a
+{
+		margin: auto auto;
+		padding: 5px 20px 5px 20px;
+		text-decoration: none;
+		font-size: 12pt;
+		color: #666;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		background-color: rgba(152,244,127,0.8);
+		border: 1px solid rgba(0,0,0,0.1);
+		-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+		-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+		box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+		text-shadow: 1px 1px 1px rgba(255,255,255,1.0);
+		text-align: center;
+}
+
+#new a:hover
+{
+	background-color: rgba(152,244,127,0.8);
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+#new a:active {
+	margin-top: 2px;
+}
+
+#new a:focus {
+	color: green;
+	outline:none;
+}
+
+
 #right_content{
 	width: 250px;
 	float: right;
@@ -321,6 +362,30 @@ label{
 
 #characters{
 	text-align: center;
+}
+
+
+#display {
+	background-color: rgba(152,244,127,0.8);
+	margin: 10px;
+	text-align:center;
+	font-weight: bold;
+	
+}
+
+#CharacterTable{
+	width: 100%;
+	table-layout: auto;
+}
+
+#characterblock {
+	
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	margin: auto auto;
+	width:83%;
+	background-color:rgba(152,244,127,0.5);;
 }
 
 .label{

@@ -7,7 +7,7 @@
 ?>
 </div>
 <div id = "footer">
-<p>This site is copyright &copy 2009 Sarah Frisk.</p>
+<p><em>This site is copyright &copy 2009 Sarah Frisk.</em></p>
 </div>
 </body>
 </html>

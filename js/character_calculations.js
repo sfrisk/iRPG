@@ -4,6 +4,11 @@
 // Project 10
 // Due date: December 16
 
+
+// THIS IS OLD CODE, CURRENTLY NOT IN THE PROJECT, BUT IS IN THE 
+// MIDST OF BEING SCRAPPED FOR PARTS
+
+
 window.onload = setup;
 
 var numericExpression = /^[0-9]+$/;
