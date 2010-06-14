@@ -7,10 +7,11 @@
 
 class database
 {
-	var $dbhost = 'Localhost';//'mysql.jamesdaniels.net';	//'Localhost';
-	var $dbname = 'rpg';//'rpgalot';	//'rpg';
-	var $dbuser = 'root';//'sarah';	//'root';
-	var $dbpass =  ''; //'ELRpXfYQ';	//''; 
+	//put database info here
+	var $dbhost = null;
+	var $dbname = null.
+	var $dbuser = null;
+	var $dbpass =  null;
 
 	private $link;
 	private $result;
